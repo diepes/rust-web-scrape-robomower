@@ -8,7 +8,7 @@ struct QueryRecord {
 #[derive(serde::Deserialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 struct CountryRecord {
-    //{"AreaName":"International","Countrys":[{"Id":14,"CountryName":"English","Link":""}]},
+    //{"AreaName":"International","countries":[{"Id":14,"CountryName":"English","Link":""}]},
     id: usize,
     country_name: String,
     link: String,
@@ -18,7 +18,8 @@ struct CountryRecord {
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 struct AreaRecord {
     area_name: String,
-    countrys: Vec<CountryRecord>,
+    #[serde(rename = "Countrys")]
+    countries: Vec<CountryRecord>,
 }
 
 //# curl 'https://www.yardforce-tools.com/WebData/GetCountry' \
@@ -27,20 +28,40 @@ struct AreaRecord {
 //#   -H 'referer: https://www.yardforce-tools.com/Mobile_Web/Europe/Deutschland/Products.html' \
 //#   --compressed
 
-pub async fn query_get_countrys() -> anyhow::Result<()> {
-    log::info!("query_get_countrys");
+pub async fn query_get_countries() -> anyhow::Result<()> {
+    log::info!("query_get_countries");
     let url = format!(
         "{url_base}/{uri}",
         // go check out her latest album. It's 🔥
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetCountry",
     );
-    let count = get(url).await.unwrap();
-    log::info!("Found {} countries", count,);
+    let area_records = get(url).await.unwrap();
+    log::info!("Found {} countries", area_records.len(),);
+    print_pretty_countries(area_records).await;
     Ok(())
 }
+async fn print_pretty_countries(area_records: Vec<AreaRecord>) {
+    let mut count_countries = 0;
+    for area_record in area_records.iter() {
+        print!("Area: {}", area_record.area_name);
+        println!(
+            "    {}",
+            area_record
+                .countries
+                .iter()
+                .map(|country| {
+                    count_countries += 1;
+                    format!("Country:{}-{}", country.id, country.country_name)
+                })
+                .collect::<Vec<String>>()
+                .join(", ")
+        );
+    }
+    println!(" Total Countries {count_countries}");
+}
 
-async fn get(url: String) -> anyhow::Result<usize> {
+async fn get(url: String) -> anyhow::Result<Vec<AreaRecord>> {
     let client = reqwest::Client::new();
     let request = client
         .get(url)
@@ -52,8 +73,9 @@ async fn get(url: String) -> anyhow::Result<usize> {
     let response = request.send().await?;
     let text = response.text().await?;
     log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<AreaRecord> = serde_json::from_str(&text).expect("Failed to parse json response.");
+    let data: Vec<AreaRecord> =
+        serde_json::from_str(&text).expect("Failed to parse json response.");
 
-    log::debug!("{:?} {}", data, data.len());
-    Ok(data.len())
+    log::debug!("data = {:#?} len={}", data, data.len());
+    Ok(data)
 }

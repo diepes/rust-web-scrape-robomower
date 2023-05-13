@@ -1,6 +1,6 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 // mod query_webdata;
-mod query_get_country;
+mod query_get_countries;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -8,6 +8,6 @@ async fn main() -> anyhow::Result<()> {
     log::info!("Start main.");
     //query_webdata::query_counties(1, 25).await?;
 
-    query_get_country::query_get_countrys().await?;
+    query_get_countries::query_get_countries().await?;
     Ok(())
 }
