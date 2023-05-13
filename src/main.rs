@@ -11,8 +11,19 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         query = "countryId=18"
     );
     println!("Check url={url}");
-    get(&url).await.expect("Web error");
+    get(&url).await?;
     Ok(())
+}
+
+use serde::{Deserialize,};
+
+#[derive(Deserialize, Debug)]
+#[serde(deny_unknown_fields, rename_all = "PascalCase")]
+struct Products {
+    //{"ProductId":149,"StyleOneUrl":"6d7...22c.jpg","StyleTwoUrl":"d11...bf9.jpg"},
+    product_id: u32,
+    style_one_url: String,
+    style_two_url: String,
 }
 
 async fn get(url: &str) -> Result<(), Box<dyn std::error::Error>> {
@@ -28,13 +39,16 @@ async fn get(url: &str) -> Result<(), Box<dyn std::error::Error>> {
         // confirm the request using send()
     let response = request
         .send()
-        .await
+        .await?;
         // the rest is the same!
-        .unwrap()
+        //.unwrap();
+    let text = response
         .text()
-        .await;
+        .await?;
+        //.unwrap();
     //let body = client.get(url).await?.text().await?;
-
-    println!("response = {:?}  len={}", response,0);
+    //println!("response = {:?}  len={}", text, text.len());
+    let j: Vec<Products> = serde_json::from_str(&text)?;
+    println!("{:?}",j);
     Ok(())
 }
