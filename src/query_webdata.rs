@@ -1,5 +1,14 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
+
+#[derive(serde::Deserialize, Debug)]
+#[serde(deny_unknown_fields, rename_all = "PascalCase")]
+struct ProductRecord {
+    //{"ProductId":149,"StyleOneUrl":"6d7...22c.jpg","StyleTwoUrl":"d11...bf9.jpg"},
+    product_id: u32,
+    style_one_url: String,
+    style_two_url: String,
+}
 struct QueryRecord {
     num: usize,
     count: usize,
@@ -19,7 +28,7 @@ pub async fn query_counties(start: usize, end: usize) -> anyhow::Result<()> {
             uri = "WebData/GetMPageImgs",
             query = query,
         );
-        handles.push((i, url.clone(), tokio::spawn(get(url))));
+        handles.push((i, url.clone(), tokio::spawn(get_url(url))));
     }
     let mut url_with_values = Vec::new();
     for (i, url, handle) in handles {
@@ -43,16 +52,10 @@ pub async fn query_counties(start: usize, end: usize) -> anyhow::Result<()> {
     Ok(())
 }
 
-#[derive(serde::Deserialize, Debug)]
-#[serde(deny_unknown_fields, rename_all = "PascalCase")]
-struct Product {
-    //{"ProductId":149,"StyleOneUrl":"6d7...22c.jpg","StyleTwoUrl":"d11...bf9.jpg"},
-    product_id: u32,
-    style_one_url: String,
-    style_two_url: String,
-}
 
-async fn get(url: String) -> anyhow::Result<(usize, Vec<Product>)> {
+
+async fn get_url(url: String) -> anyhow::Result<(usize, Vec<ProductRecord>)> {
+
     let client = reqwest::Client::new();
     let request = client
         .get(url)
@@ -64,7 +67,7 @@ async fn get(url: String) -> anyhow::Result<(usize, Vec<Product>)> {
     let response = request.send().await?;
     let text = response.text().await?;
     log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<Product> = serde_json::from_str(&text)?;
+    let data: Vec<ProductRecord> = serde_json::from_str(&text)?;
     log::debug!("{:?} {}", data, data.len());
     Ok((data.len(), data))
 }
