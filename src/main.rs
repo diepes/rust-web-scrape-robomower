@@ -17,7 +17,7 @@ async fn main() -> anyhow::Result<()> {
     //#.await
     //#.expect("Unable to create file");
     //let mut f = tokio::io::BufWriter::new(f);
-    let mut f = write_to_file::OutFile::new("/tmp/foo2.yaml").await;
+    let mut f = write_to_file::OutFile::new("./api-dump.yaml").await;
     f.write(format!("test msg:")).await;
 
     let area_records = query_get_countries::query_get_countries().await?;
@@ -41,7 +41,7 @@ async fn main() -> anyhow::Result<()> {
                     f.write(format!("        - id: {}", second.id)).await;
                     f.write(format!("          name: {}", second.class_name))
                         .await;
-                    if ["Robotic", "Robotermäher"]
+                    if ["Robotic", "Robotermäher", "Robot-tondeuse", "Robots", "Robot"]
                         .iter()
                         .any(|&s| s == second.class_name)
                     {
@@ -65,6 +65,11 @@ async fn main() -> anyhow::Result<()> {
                                 f.write(format!(
                                     "                product_id: {}",
                                     product.product_id
+                                ))
+                                .await;
+                                f.write(format!(
+                                    "                icon_img_url: https://www.yardforce-tools.com/ProductFiles/{}",
+                                    product.icon_img_url
                                 ))
                                 .await;
                                 f.write(format!("                Attributes:")).await;

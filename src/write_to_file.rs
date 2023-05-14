@@ -18,7 +18,7 @@ impl OutFile {
     pub async fn write(&mut self, text: String) {
         let _ = self
             .file_buf_out
-            .write_all(format!("{}\n", text).as_bytes())
+            .write_all(format!("{}\n", text.trim_end()).as_bytes())
             .await
             .expect("Unable to write data");
         self.file_buf_out

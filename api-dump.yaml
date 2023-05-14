@@ -1,0 +1,594 @@
+test msg:
+area_names:
+  International:
+    - name: English
+      id: 14
+      classes_1:
+        - id: 84
+          name: Robotic
+          details:
+            - thirdCatagory: Robotic Mower
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 598
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/e29dffa4-95d9-4111-ad82-5a7c37a497d4.jpg
+                Attributes:
+                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Cutting Width": "180 mm"
+                  "Cutting Height, min-max": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 596
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d1b90653-84e2-4914-ad06-bd697f589965.jpg
+                Attributes:
+                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Cutting Width": "180 mm"
+                  "Cutting Height, min-max": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 330
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/a2b4be56-b2cd-4f6f-b04c-d96c53232fa9.jpg
+                Attributes:
+                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Cutting Width": "180 mm"
+                  "Cutting Height, min-max": "20 - 60 mm"
+              - product_name: SA800PRO
+                product_id: 595
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d336c005-26b5-4b1a-b226-16f29373d671.jpg
+                Attributes:
+                  "Battery": "Lithium-Ion Battery, 28 V / 2.5 Ah"
+                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Cutting Width": "180 mm "
+                  "Cutting Height, min-max": "20 -60 mm"
+        - id: 1
+          name: Lawn Mower
+        - id: 2
+          name: Saw
+        - id: 5
+          name: Grass Trimmer
+        - id: 6
+          name: Hedge Trimmer
+        - id: 7
+          name: Blower & Vacuum
+        - id: 8
+          name: Shredder
+        - id: 9
+          name: Scarifier
+        - id: 11
+          name: Snow Thrower
+        - id: 12
+          name: Electric Pressure Washer
+        - id: 13
+          name: Petrol Pressure Washer
+        - id: 83
+          name: Cordless Pressure Washer
+  America:
+    - name: Canada
+      id: 15
+      classes_1:
+    - name: United States
+      id: 6
+      classes_1:
+        - id: 62
+          name: Cultivator
+        - id: 63
+          name: Edger
+        - id: 64
+          name: Shredder / Chippers
+        - id: 78
+          name: Petrol Pressure Washers
+        - id: 79
+          name: Electric Pressure Washers
+    - name: Brasil
+      id: 16
+      classes_1:
+  Asia & Oceania:
+    - name: Australia
+      id: 1
+      classes_1:
+        - id: 14
+          name:  Lawn Mower
+        - id: 97
+          name: Robotic
+          details:
+            - thirdCatagory: Robotic Mower
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 599
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/9e6eddf7-dc0f-4c54-9131-2f4dd021dfc7.jpg
+                Attributes:
+                  "Suitable for Lawn Area": "500 SQM"
+                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
+                  "Cutting Width": "180 mm"
+              - product_name: SA600H
+                product_id: 568
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/7c1e5bec-15ad-46ec-ac2c-b76b7dcc5802.jpg
+                Attributes:
+                  "Suitable for Lawn Area": "600 SQM"
+                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
+                  "Cutting Width": "180 mm"
+              - product_name: SC600ECO
+                product_id: 600
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/49e3dded-221d-40ef-b53e-8adb90b22016.jpg
+                Attributes:
+                  "Suitable for Lawn Area": "600 SQM"
+                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
+                  "Cutting Width": "180 mm"
+              - product_name: SA800PRO
+                product_id: 601
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/b7992fca-4f3f-4312-9ca8-a6bf3ceba5cc.jpg
+                Attributes:
+                  "Suitable for Lawn Area": "800 SQM"
+                  "Battery": "Lithium Battery, 28 V / 2.5 Ah"
+                  "Cutting Width": "180 mm "
+        - id: 87
+          name: Line Trimmer
+        - id: 88
+          name: Saw
+        - id: 90
+          name: Hedge Trimmer
+        - id: 103
+          name: Blower & Vacuum
+        - id: 104
+          name: Shredder
+        - id: 106
+          name: Electric Pressure Washer
+        - id: 107
+          name: Petrol Pressure Washer
+        - id: 108
+          name: Cordless Pressure Washer
+    - name: New Zealand
+      id: 21
+      classes_1:
+    - name: 中国
+      id: 25
+      classes_1:
+    - name: 日本
+      id: 9
+      classes_1:
+        - id: 16
+          name: 高枝チェーンソー
+        - id: 85
+          name: 芝刈り機
+        - id: 206
+          name: 耕うん機
+        - id: 207
+          name: バリカン
+        - id: 208
+          name: 枝シュレッダー
+        - id: 209
+          name: ブロワー&バキューム
+        - id: 210
+          name: スノースコップ
+  Europe:
+    - name: United Kingdom
+      id: 7
+      classes_1:
+        - id: 23
+          name: Lawn Mower
+        - id: 50
+          name: Chain Saw
+        - id: 51
+          name: Pruner
+        - id: 52
+          name: Brush Cutter
+        - id: 53
+          name: Grass Trimmer
+        - id: 54
+          name: Hedge Trimmer
+        - id: 55
+          name: Blower & Vacuum
+        - id: 56
+          name: Shredder
+        - id: 57
+          name: Scarifier
+        - id: 58
+          name: Tiller
+        - id: 59
+          name: Snow Thrower
+        - id: 24
+          name: Electric Pressure Washer
+        - id: 26
+          name: Petrol Pressure Washer
+    - name: Deutschland
+      id: 18
+      classes_1:
+        - id: 82
+          name: Robotermäher
+          details:
+            - thirdCatagory: Robotermäher
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 602
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/60fcc669-314c-4914-be66-2c12e81e8c41.jpg
+                Attributes:
+                  "Arbeitsbereich": "500 ㎡"
+                  "Schnittbreite": "18 cm"
+                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
+              - product_name: SC600ECO
+                product_id: 308
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/41bd6c8a-bc8e-44f6-a8d8-e9a54f405b5a.jpg
+                Attributes:
+                  "Arbeitsbereich": "600 ㎡"
+                  "Schnittbreite": "18 cm"
+                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
+              - product_name: SA900
+                product_id: 309
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/95ebf589-7fe1-46e8-8aad-552d652aca7e.jpg
+                Attributes:
+                  "Arbeitsbereich": "900 ㎡"
+                  "Schnittbreite": "18 cm"
+                  "Li-Ionen-Akku": "28 V / 2,9 Ah"
+              - product_name: SA600H
+                product_id: 293
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d6aa9fa7-fcda-409f-b3ce-17d21c22c086.jpg
+                Attributes:
+                  "Arbeitsbereich": "600 ㎡"
+                  "Schnittbreite": "18 cm"
+                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
+              - product_name: SA800PRO
+                product_id: 603
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/1e60d493-1e9c-4e98-acc5-5760b6e8299c.jpg
+                Attributes:
+                  "Arbeitsbereich": "800 ㎡"
+                  "Schnittbreite": "18 cm"
+                  "Li-Ionen-Akku": "28 V / 2.5 Ah"
+        - id: 65
+          name: Rasenmäher
+        - id: 66
+          name: Kettensägen
+        - id: 86
+          name: Teleskop Astsägen
+        - id: 68
+          name: Freischneider
+        - id: 69
+          name: Rasentrimmer
+        - id: 70
+          name: Heckenscheren
+        - id: 67
+          name: Teleskop-Heckenscheren
+        - id: 71
+          name: Laubbläser und –sauger
+        - id: 72
+          name: Häcksler
+        - id: 73
+          name: Vertikutierer
+        - id: 75
+          name: Schneefräsen
+        - id: 76
+          name: Elektro-Hochdruckreiniger
+        - id: 77
+          name: Benzin-Hochdruckreiniger
+        - id: 126
+          name: Akku-Hochdruckreiniger
+    - name: España
+      id: 17
+      classes_1:
+        - id: 161
+          name: Robots
+          details:
+            - thirdCatagory: Robot cortacésped
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 730
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/b462c2ee-446a-4bb0-b9d5-1bb28e2d4def.jpg
+                Attributes:
+                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
+                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Anchura de corte": "180 mm"
+                  "Altura de corte, mín.-máx.": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 729
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/4e623672-5e31-4e58-a4fa-a4909540a42e.jpg
+                Attributes:
+                  "Batería": "Batería de ion de litio, 28 V/2,0 Ah"
+                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Anchura de corte": "180 mm"
+                  "Altura de corte, mín.-máx.": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 731
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d96ca4f4-b399-4801-aaee-3327afba75b4.jpg
+                Attributes:
+                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
+                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Anchura de corte": "180 mm"
+                  "Altura de corte, mín.-máx.": "20 - 60 mm"
+              - product_name: SA800PRO
+                product_id: 732
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/eea19ccf-1b70-4c24-ac88-e08ffe1a4d62.jpg
+                Attributes:
+                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
+                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Anchura de corte": "180 mm "
+                  "Altura de corte, mín.-máx.": "20 -60 mm"
+        - id: 162
+          name: Cortacéspedes
+        - id: 163
+          name: Sierras
+        - id: 164
+          name: Pruner
+        - id: 165
+          name: Brush Cutter
+        - id: 166
+          name:  Cortabordes
+        - id: 167
+          name: Cortasetos
+        - id: 168
+          name: Sopladores y aspiradores
+        - id: 169
+          name: Trituradoras
+        - id: 170
+          name: Escarificadores
+        - id: 171
+          name: Tiller
+        - id: 172
+          name: Quitanieves
+        - id: 173
+          name: Limpiador a presión eléctrico
+        - id: 174
+          name: Limpiador a presión a gasolina
+        - id: 175
+          name: Limpiador a presión inalámbrico
+    - name: France
+      id: 8
+      classes_1:
+        - id: 130
+          name: Robot-tondeuse
+          details:
+            - thirdCatagory: Robot-tondeuse
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 607
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/89387446-1f3a-4135-9c3e-e1d7a0e7e61c.jpg
+                Attributes:
+                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
+                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
+                  "Largeur de coupe": "180 mm"
+                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 606
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/3cadefe2-9b9c-4c79-85df-13d03c0f8624.jpg
+                Attributes:
+                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
+                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
+                  "Largeur de coupe": "180 mm"
+                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 604
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/1afceea2-8f66-460a-a15f-4d7093fccc41.jpg
+                Attributes:
+                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
+                  "Source d'alimentation": "Entrée 110-240 V c.a., 50/60 Hz, Sortie 32 V / 1,5 A c.c. (IP67)"
+                  "Largeur de coupe": "180 mm"
+                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
+              - product_name: SA800PRO
+                product_id: 605
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/3c89aad7-bce7-40eb-be38-8bd3c6456fc5.jpg
+                Attributes:
+                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.5 Ah"
+                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
+                  "Largeur de coupe": "180 mm "
+                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
+        - id: 131
+          name: Tondeuse
+        - id: 132
+          name: Tronçonneuse et élagueuse
+        - id: 135
+          name: Coupe-bordure
+        - id: 136
+          name: Taille-haie
+        - id: 137
+          name: Aspirateur souffleur
+        - id: 138
+          name: Broyeur
+        - id: 139
+          name: Scarificateur
+        - id: 140
+          name: Tiller
+        - id: 141
+          name: Fraise à neige
+        - id: 142
+          name: Nettoyeurs haute pression électriques
+        - id: 143
+          name: Nettoyeurs haute pression à essence
+        - id: 144
+          name: Nettoyeurs haute pression sans fil
+    - name: Italia
+      id: 19
+      classes_1:
+        - id: 145
+          name: Robot
+          details:
+            - thirdCatagory: Robotic Mower
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 682
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/68b9f38e-50f4-4d6c-947c-2ecf0ebe1f33.jpg
+                Attributes:
+                  "Batteria": "Batteria agli ioni di litio, 28 V/2.0 Ah"
+                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
+                  "Velocità a vuoto": "180 mm"
+                  "Ampiezza di taglio": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 681
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/16b917de-9403-4e00-8e47-d67eeba9f738.jpg
+                Attributes:
+                  "Batteria": "Batteria agli ioni di litio, 28 V/2.0 Ah"
+                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
+                  "Velocità a vuoto": "180 mm"
+                  "Ampiezza di taglio": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 679
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/f299ad40-f168-4746-a5c1-f16aedd7a81b.jpg
+                Attributes:
+                  "Batteria": "Batteria agli ioni di litio, 28 V/2,0 Ah"
+                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
+                  "Velocità a vuoto": "3500 RPM"
+                  "Ampiezza di taglio": "180 mm"
+              - product_name: SA800PRO
+                product_id: 680
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/276212f2-5e12-4b1d-b6f9-094c776df423.jpg
+                Attributes:
+                  "Batteria": "Batteria agli ioni di litio, 28 V/2.5 Ah"
+                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
+                  "Velocità a vuoto": "180 mm "
+                  "Ampiezza di taglio": "20 -60 mm"
+        - id: 146
+          name: Tosaerba
+        - id: 147
+          name: Motoseghe
+        - id: 150
+          name: Decespugliatori
+        - id: 151
+          name: Tagliasiepi
+        - id: 152
+          name: Soffiatori e aspiratori
+        - id: 153
+          name: Trituratori
+        - id: 154
+          name: Scarificatori
+        - id: 156
+          name: Sgombraneve
+        - id: 158
+          name: Idropulitrici elettriche
+        - id: 159
+          name: Idropulitrici a benzina
+        - id: 160
+          name: Idropulitrici cordless
+    - name: Netherlands
+      id: 23
+      classes_1:
+        - id: 176
+          name: Robotic
+          details:
+            - thirdCatagory: Robotic Mower
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 832
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/e1d0a2fd-df6e-4694-966f-2067babb9b7f.jpg
+                Attributes:
+                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Snelheid zonder belasting": "180 mm"
+                  "Maaibreedte": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 831
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/0d09431f-3798-4675-a4d1-8c8a140a5150.jpg
+                Attributes:
+                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Snelheid zonder belasting": "180 mm"
+                  "Maaibreedte": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 829
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/4c45f208-56d1-4f60-a6a8-0f7fb8372ff0.jpg
+                Attributes:
+                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Snelheid zonder belasting": "180 mm"
+                  "Maaibreedte": "20 - 60 mm"
+              - product_name: SA800PRO
+                product_id: 830
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/32ffc090-fbbd-4109-9b3c-980578672fc7.jpg
+                Attributes:
+                  "Accu": "Lithium-Ion Battery, 28 V / 2.5 Ah"
+                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Snelheid zonder belasting": "180 mm "
+                  "Maaibreedte": "20 -60 mm"
+        - id: 177
+          name: Lawn Mower
+        - id: 178
+          name: Saw
+        - id: 179
+          name: Pruner
+        - id: 180
+          name: Brush Cutter
+        - id: 181
+          name: Grass Trimmer
+        - id: 182
+          name: Hedge Trimmer
+        - id: 183
+          name: Blower & Vacuum
+        - id: 184
+          name: Shredder
+        - id: 185
+          name: Scarifier
+        - id: 186
+          name: Tiller
+        - id: 187
+          name: Snow Thrower
+        - id: 188
+          name: Electric Pressure Washer
+        - id: 189
+          name: Petrol Pressure Washer
+        - id: 190
+          name: Cordless Pressure Washer
+    - name: Sweden
+      id: 24
+      classes_1:
+        - id: 191
+          name: Robotic
+          details:
+            - thirdCatagory: Robotic Mower
+              productsInCatagory:
+              - product_name: SA500ECO
+                product_id: 828
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/999d7bca-0e15-4966-90e4-c8ea8d24659c.jpg
+                Attributes:
+                  "Batteri": "Lithium-Ion Battery, 28 V / 2.0 Ah"
+                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Hastighet utan belastning": "180 mm"
+                  "Skärbredd": "20 - 60 mm"
+              - product_name: SC600ECO
+                product_id: 827
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d4cee111-6399-454a-b236-6ebe83fb703b.jpg
+                Attributes:
+                  "Batteri": "Litium jon batteri, 28 V / 2.0 Ah"
+                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Hastighet utan belastning": "180 mm"
+                  "Skärbredd": "20 - 60 mm"
+              - product_name: SA600H
+                product_id: 825
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/709581c1-0341-4458-9a45-6e79153f979c.jpg
+                Attributes:
+                  "Batteri": "Litiumjonbatteri, 28 V/2.0 Ah"
+                  "Strömförsörjning": "Ineffekt 110-240 V AC, 50/60 Hz, uteffekt 32 V/1,5 A  d.c. (IP67)"
+                  "Hastighet utan belastning": "3500 RPM"
+                  "Skärbredd": "180 mm"
+              - product_name: SA800PRO
+                product_id: 826
+                icon_img_url: https://www.yardforce-tools.com/ProductFiles/a111db1b-cb80-4708-bc0f-6690dfc048c3.jpg
+                Attributes:
+                  "Batteri": "Litium jon batteri, 28 V / 2.5 Ah"
+                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
+                  "Hastighet utan belastning": "180 mm "
+                  "Skärbredd": "20 -60 mm"
+        - id: 192
+          name: Lawn Mower
+        - id: 193
+          name: Saw
+        - id: 194
+          name: Pruner
+        - id: 195
+          name: Brush Cutter
+        - id: 196
+          name: Grass Trimmer
+        - id: 197
+          name: Hedge Trimmer
+        - id: 198
+          name: Blower & Vacuum
+        - id: 199
+          name: Shredder
+        - id: 200
+          name: Scarifier
+        - id: 201
+          name: Tiller
+        - id: 202
+          name: Snow Thrower
+        - id: 203
+          name: Electric Pressure Washer
+        - id: 204
+          name: Petrol Pressure Washer
+        - id: 205
+          name: Cordless Pressure Washer
