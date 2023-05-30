@@ -1,6 +1,11 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-#[derive(serde::Deserialize, Debug)]
+//use crate::query_get_third_class::ProductThirdClass;
+
+use serde::Serialize;
+pub mod query_get_third_class;
+
+#[derive(serde::Deserialize, Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct Product2ndClass {
     //[{\"Id\":84,\"ClassName\":\"Robotic\",\"IconImg1\":\"91....jpg\",\"IconImg2\":\"c422e2c2-4885-46d9-8a99-1815d543bfc1.jpg\"},
@@ -8,6 +13,9 @@ pub struct Product2ndClass {
     pub class_name: String,
     pub icon_img1: String,
     pub icon_img2: String,
+    #[serde(skip_deserializing)]
+    pub third_class: Vec<query_get_third_class::ProductThirdClass>,
+    // pub third_class: Option<Vec<query_get_third_class::ProductThirdClass>>,
 }
 
 pub async fn query_get_second_classes(
@@ -23,7 +31,7 @@ pub async fn query_get_second_classes(
         uri = "WebData/GetSecondClasses",
         query = query,
     );
-    let product_classes = get(url).await?;
+    let mut product_classes = get(url).await?;
     log::info!(
         "Found {} 2ndProductClasses {}",
         product_classes.len(),
@@ -33,6 +41,24 @@ pub async fn query_get_second_classes(
             .collect::<Vec<String>>()
             .join(", ")
     );
+    for second in &mut product_classes {
+        if [
+            "Robotic",
+            "Robotermäher",
+            "Robot-tondeuse",
+            "Robots",
+            "Robot",
+        ]
+        .iter()
+        .any(|&s| s == second.class_name)
+        {
+            let products = query_get_third_class::query_get_products(
+                country_id, second.id,
+            )
+            .await?;
+        second.third_class.extend(products);
+        }
+    }
     Ok(product_classes)
 }
 

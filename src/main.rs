@@ -3,7 +3,7 @@
 mod query_get_countries;
 mod query_get_first_class;
 mod query_get_second_class;
-mod query_get_third_class;
+//mod query_get_third_class;
 mod write_to_file;
 
 #[tokio::main]
@@ -32,53 +32,7 @@ async fn main() -> anyhow::Result<()> {
                 let second_vec =
                     query_get_second_class::query_get_second_classes(country_id, product_class.id)
                         .await?;
-                for second in second_vec {
-                    f.write(format!("        - id: {}", second.id)).await;
-                    f.write(format!("          name: {}", second.class_name))
-                        .await;
-                    if ["Robotic", "Robotermäher", "Robot-tondeuse", "Robots", "Robot"]
-                        .iter()
-                        .any(|&s| s == second.class_name)
-                    {
-                        f.write(format!("          details:")).await;
-                        let products =
-                            query_get_third_class::query_get_products(country_id, second.id)
-                                .await?;
-                        for third_catagory in products {
-                            f.write(format!(
-                                "            - thirdCatagory: {}",
-                                third_catagory.third_class_name
-                            ))
-                            .await;
-                            f.write(format!("              productsInCatagory:")).await;
-                            for product in third_catagory.products {
-                                f.write(format!(
-                                    "              - product_name: {}",
-                                    product.product_name
-                                ))
-                                .await;
-                                f.write(format!(
-                                    "                product_id: {}",
-                                    product.product_id
-                                ))
-                                .await;
-                                f.write(format!(
-                                    "                icon_img_url: https://www.yardforce-tools.com/ProductFiles/{}",
-                                    product.icon_img_url
-                                ))
-                                .await;
-                                f.write(format!("                Attributes:")).await;
-                                for attr in product.third_attrs {
-                                    f.write(format!(
-                                        "                  \"{}\": \"{}\"",
-                                        attr.attr_name, attr.attr_value
-                                    ))
-                                    .await;
-                                }
-                            }
-                        }
-                    }
-                }
+                f.write(serde_yaml::to_string(&second_vec)?).await;
             }
         }
     }
