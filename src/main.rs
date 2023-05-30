@@ -1,5 +1,3 @@
-use tokio::io::AsyncWriteExt;
-
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 // mod query_webdata;
 mod query_get_countries;
@@ -12,13 +10,10 @@ mod write_to_file;
 async fn main() -> anyhow::Result<()> {
     env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
     log::info!("Start main.");
-    //query_webdata::query_counties(1, 25).await?;
-    //#let f = tokio::fs::File::create("/tmp/foo.yaml")
-    //#.await
-    //#.expect("Unable to create file");
-    //let mut f = tokio::io::BufWriter::new(f);
     let mut f = write_to_file::OutFile::new("./api-dump.yaml").await;
     f.write(format!("test msg:")).await;
+
+    // let mut yaml = serde_yaml::Serializer::new(String);
 
     let area_records = query_get_countries::query_get_countries().await?;
     print_pretty_countries(&area_records).await;
