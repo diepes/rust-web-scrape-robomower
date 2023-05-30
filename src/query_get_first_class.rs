@@ -18,7 +18,7 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
         uri = "WebData/GetFirstClasses",
         query = query,
     );
-    let product_classes = get(url).await.unwrap();
+    let product_classes = get(url).await?;
     log::info!(
         "Found {} ProductClasses {}",
         product_classes.len(),

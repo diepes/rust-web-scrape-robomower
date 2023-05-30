@@ -23,7 +23,7 @@ pub async fn query_get_second_classes(
         uri = "WebData/GetSecondClasses",
         query = query,
     );
-    let product_classes = get(url).await.unwrap();
+    let product_classes = get(url).await?;
     log::info!(
         "Found {} 2ndProductClasses {}",
         product_classes.len(),

@@ -36,7 +36,7 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetCountry",
     );
-    let area_records = get(url).await.unwrap();
+    let area_records = get(url).await?;
     log::info!("Found {} countries", area_records.len(),);
     Ok(area_records)
 }

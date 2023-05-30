@@ -42,7 +42,7 @@ pub async fn query_get_products(
         uri = "WebData/GetProducts",
         query = query,
     );
-    let product_classes = get(url).await.unwrap();
+    let product_classes = get(url).await?;
     log::info!(
         "Found {} Product_classes_3rd {}",
         product_classes.len(),

@@ -32,7 +32,7 @@ pub async fn query_counties(start: usize, end: usize) -> anyhow::Result<()> {
     }
     let mut url_with_values = Vec::new();
     for (i, url, handle) in handles {
-        let (count, data) = handle.await.unwrap()?;
+        let (count, data) = handle.await?;
         if count > 0 {
             log::info!("🔥 i={i} count={count} url={url}");
             url_with_values.push(QueryRecord {num: i, count: data.len(), url: url } );
