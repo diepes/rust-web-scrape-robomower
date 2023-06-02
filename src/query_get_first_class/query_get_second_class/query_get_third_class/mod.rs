@@ -1,8 +1,6 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-use serde::Serialize;
-
-#[derive(serde::Deserialize, Serialize, Debug)]
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct ProductThirdClass {
     //[{"ThridClassName":"Robotic Mower","Products":[{"ProductId":598,
@@ -11,7 +9,7 @@ pub struct ProductThirdClass {
     pub products: Vec<Products>,
 }
 
-#[derive(serde::Deserialize, Serialize, Debug)]
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct Products {
     //[{"ProductId":598,"ProductName":"SA500ECO","IconImgUrl":"e29dffa4-95d9-4111-ad82-5a7c37a497d4.jpg","ThirdClassId":223,"ThirdAttrs":[{"AttrId":0,"AttrName":"Battery","AttrValue":"Lithium-Ion Battery, 28 V / 2.0 Ah","IsSpecial":false},{"AttrId":0,"AttrName":"Power Supply","AttrValue":"Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)","IsSpecial":false},{"AttrId":0,"AttrName":"Cutting Width","AttrValue":"180 mm","IsSpecial":false},{"AttrId":0,"AttrName":"Cutting Height, min-max","AttrValue":"20 - 60 mm","IsSpecial":false}]},
@@ -22,7 +20,7 @@ pub struct Products {
     pub third_attrs: Vec<Attributes>,
 }
 
-#[derive(serde::Deserialize, Serialize, Debug)]
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct Attributes {
     //[{"AttrId":0,"AttrName":"Battery","AttrValue":"Lithium-Ion Battery, 28 V / 2.0 Ah","IsSpecial":false},

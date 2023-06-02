@@ -2,10 +2,9 @@
 
 //use crate::query_get_third_class::ProductThirdClass;
 
-use serde::Serialize;
 pub mod query_get_third_class;
 
-#[derive(serde::Deserialize, Serialize, Debug)]
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct Product2ndClass {
     //[{\"Id\":84,\"ClassName\":\"Robotic\",\"IconImg1\":\"91....jpg\",\"IconImg2\":\"c422e2c2-4885-46d9-8a99-1815d543bfc1.jpg\"},
@@ -52,11 +51,8 @@ pub async fn query_get_second_classes(
         .iter()
         .any(|&s| s == second.class_name)
         {
-            let products = query_get_third_class::query_get_products(
-                country_id, second.id,
-            )
-            .await?;
-        second.third_class.extend(products);
+            let products = query_get_third_class::query_get_products(country_id, second.id).await?;
+            second.third_class.extend(products);
         }
     }
     Ok(product_classes)

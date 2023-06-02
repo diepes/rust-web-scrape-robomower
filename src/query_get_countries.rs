@@ -1,10 +1,10 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-struct QueryRecord {
-    num: usize,
-    count: usize,
-    url: String,
-}
+// struct QueryRecord {
+//     num: usize,
+//     count: usize,
+//     url: String,
+// }
 #[derive(serde::Deserialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct CountryRecord {
