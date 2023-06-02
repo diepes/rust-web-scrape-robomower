@@ -9,6 +9,8 @@ pub struct CountryRecord {
     pub id: usize,
     pub country_name: String,
     pub link: String,
+    #[serde(skip_deserializing)]
+    pub first_class: Vec<query_get_first_class::ProductClass>,
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
@@ -33,8 +35,22 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetCountry",
     );
-    let area_records = get(url).await?;
+    let mut area_records = get(url).await?;
     log::info!("Found {} countries", area_records.len(),);
+    for area in &mut area_records {
+        // f.write(format!("  {}:", area.area_name)).await;
+        for country in &mut area.countries {
+            //f.flush().await.expect("Unable to flush to disk");
+            // f.write(format!("    - name: {}", country.country_name))
+            //     .await;
+            // f.write(format!("      id: {}", country.id)).await;
+            // f.write("      classes_1:".to_string()).await;
+            let country_id = country.id;
+            let first = query_get_first_class::query_get_first_classes(country_id).await?;
+            country.first_class.extend(first)
+            // f.write(serde_yaml::to_string(&first)?).await;
+        }
+    }
     Ok(area_records)
 }
 async fn get(url: String) -> anyhow::Result<Vec<AreaRecord>> {
