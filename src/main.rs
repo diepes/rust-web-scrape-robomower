@@ -1,9 +1,9 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 // mod query_webdata;
 mod query_get_countries;
-mod query_get_first_class;
-//mod query_get_second_class;
-//mod query_get_third_class;
+// mod query_get_first_class;
+// mod query_get_second_class;
+// mod query_get_third_class;
 mod write_to_file;
 
 #[tokio::main]
@@ -16,7 +16,8 @@ async fn main() -> anyhow::Result<()> {
     // let mut yaml = serde_yaml::Serializer::new(String);
 
     let area_records = query_get_countries::query_get_countries().await?;
-    print_pretty_countries(&area_records).await;
+    f.write(serde_yaml::to_string(&area_records)?).await;
+    // print_pretty_countries(&area_records).await;
     f.write("area_names:".to_string()).await;
     for area in area_records {
         f.write(format!("  {}:", area.area_name)).await;
@@ -27,7 +28,7 @@ async fn main() -> anyhow::Result<()> {
             f.write(format!("      id: {}", country.id)).await;
             f.write("      classes_1:".to_string()).await;
             let country_id = country.id;
-            let first = query_get_first_class::query_get_first_classes(country_id).await?;
+            let first = query_get_countries::query_get_first_class::query_get_first_classes(country_id).await?;
             f.write(serde_yaml::to_string(&first)?).await;
         }
     }

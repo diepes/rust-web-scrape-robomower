@@ -1,11 +1,8 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-// struct QueryRecord {
-//     num: usize,
-//     count: usize,
-//     url: String,
-// }
-#[derive(serde::Deserialize, Debug)]
+pub mod query_get_first_class;
+
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct CountryRecord {
     //{"AreaName":"International","countries":[{"Id":14,"CountryName":"English","Link":""}]},
@@ -14,7 +11,7 @@ pub struct CountryRecord {
     pub link: String,
 }
 
-#[derive(serde::Deserialize, Debug)]
+#[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct AreaRecord {
     pub area_name: String,
