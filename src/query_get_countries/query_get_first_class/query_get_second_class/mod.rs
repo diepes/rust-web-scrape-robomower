@@ -1,6 +1,7 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
 //use crate::query_get_third_class::ProductThirdClass;
+use crate::query_url;
 
 pub mod query_get_third_class;
 
@@ -30,8 +31,9 @@ pub async fn query_get_second_classes(
         uri = "WebData/GetSecondClasses",
         query = query,
     );
-    let mut product_classes = get(url).await?;
-    log::info!(
+    let mut product_classes: Vec<Product2ndClass> =
+        serde_json::from_str(query_url::get(&url).await?.as_str())?;
+    log::debug!(
         "Found {} 2ndProductClasses {}",
         product_classes.len(),
         product_classes
@@ -40,6 +42,12 @@ pub async fn query_get_second_classes(
             .collect::<Vec<String>>()
             .join(", ")
     );
+    let mut my_fut3: Vec<(
+        &mut Vec<query_get_third_class::ProductThirdClass>,
+        tokio::task::JoinHandle<
+            Result<Vec<query_get_third_class::ProductThirdClass>, anyhow::Error>,
+        >,
+    )> = vec![];
     for second in &mut product_classes {
         if [
             "Robotic",
@@ -51,28 +59,16 @@ pub async fn query_get_second_classes(
         .iter()
         .any(|&s| s == second.class_name)
         {
-            let products = query_get_third_class::query_get_products(country_id, second.id).await?;
-            second.third_class.extend(products);
+            my_fut3.push((
+                &mut second.third_class,
+                tokio::spawn(query_get_third_class::query_get_products(
+                    country_id, second.id,
+                )),
+            ));
         }
     }
+    for (third_class, fut) in my_fut3 {
+        third_class.extend(fut.await??);
+    }
     Ok(product_classes)
-}
-
-async fn get(url: String) -> anyhow::Result<Vec<Product2ndClass>> {
-    let client = reqwest::Client::new();
-    let request = client
-        .get(url)
-        //.header(AUTHORIZATION, "Bearer [AUTH_TOKEN]")
-        //.header(reqwest::header::CONTENT_TYPE, "application/json")
-        .header(reqwest::header::ACCEPT, "application/json")
-        .header(reqwest::header::REFERER, "https://www.yardforce-tools.com/");
-    log::debug!("Debug request={:?}", request);
-    let response = request.send().await?;
-    let text = response.text().await?;
-    log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<Product2ndClass> =
-        serde_json::from_str(&text).expect("Failed to parse json response.");
-
-    log::debug!("data = {:#?} len={}", data, data.len());
-    Ok(data)
 }

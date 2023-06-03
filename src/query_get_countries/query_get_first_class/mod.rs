@@ -1,6 +1,7 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
 pub mod query_get_second_class;
+use crate::query_url;
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
@@ -13,7 +14,7 @@ pub struct ProductClass {
 }
 
 pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<ProductClass>> {
-    log::info!("query_get_first_classes");
+    log::info!("q_get_1st_c {} START", country_id);
     let query = format!("?countryId={}", country_id);
     let url = format!(
         "{url_base}/{uri}{query}",
@@ -22,13 +23,30 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
         uri = "WebData/GetFirstClasses",
         query = query,
     );
-    let mut product_classes = get(url).await?;
+    let mut my_fut2: Vec<(
+        &mut Vec<query_get_second_class::Product2ndClass>,
+        tokio::task::JoinHandle<
+            Result<Vec<query_get_second_class::Product2ndClass>, anyhow::Error>,
+        >,
+    )> = vec![];
+
+    let mut product_classes: Vec<ProductClass> =
+        serde_json::from_str(query_url::get(&url).await?.as_str())?;
+
     for product_class in &mut product_classes {
-        let second_vec =
-            query_get_second_class::query_get_second_classes(country_id, product_class.id).await?;
-        product_class.second_class.extend(second_vec);
+        //let second_vec =
+        my_fut2.push((
+            &mut product_class.second_class,
+            tokio::spawn(query_get_second_class::query_get_second_classes(
+                country_id,
+                product_class.id,
+            )),
+        ));
     }
-    log::info!(
+    for (second_class, fut) in my_fut2 {
+        second_class.extend(fut.await??);
+    }
+    log::debug!(
         "Found {} ProductClasses {}",
         product_classes.len(),
         product_classes
@@ -37,24 +55,6 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
             .collect::<Vec<String>>()
             .join(", ")
     );
+    log::info!("q_get_1st_c {} done", country_id);
     Ok(product_classes)
-}
-
-async fn get(url: String) -> anyhow::Result<Vec<ProductClass>> {
-    let client = reqwest::Client::new();
-    let request = client
-        .get(url)
-        //.header(AUTHORIZATION, "Bearer [AUTH_TOKEN]")
-        //.header(reqwest::header::CONTENT_TYPE, "application/json")
-        .header(reqwest::header::ACCEPT, "application/json")
-        .header(reqwest::header::REFERER, "https://www.yardforce-tools.com/");
-    log::debug!("Debug request={:?}", request);
-    let response = request.send().await?;
-    let text = response.text().await?;
-    log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<ProductClass> =
-        serde_json::from_str(&text).expect("Failed to parse json response.");
-
-    log::debug!("data = {:#?} len={}", data, data.len());
-    Ok(data)
 }

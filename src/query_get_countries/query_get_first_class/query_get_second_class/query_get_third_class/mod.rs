@@ -1,5 +1,7 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
+use crate::query_url;
+
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
 pub struct ProductThirdClass {
@@ -33,17 +35,22 @@ pub async fn query_get_products(
     country_id: usize,
     second_cid: usize,
 ) -> anyhow::Result<Vec<ProductThirdClass>> {
-    log::info!("query_get_products_third_class");
+    log::info!(
+        "q_get_p_3rd_class ?countryId={}&secondCId={} START",
+        country_id,
+        second_cid
+    );
     let query = format!("?countryId={}&secondCId={}", country_id, second_cid);
     let url = format!(
         "{url_base}/{uri}{query}",
-        // go check out her latest album. It's 🔥
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetProducts",
         query = query,
     );
-    let product_classes = get(url).await?;
-    log::info!(
+    let product_classes: Vec<ProductThirdClass> =
+        serde_json::from_str(query_url::get(&url).await?.as_str())?;
+
+    log::debug!(
         "Found {} Product_classes_3rd {}",
         product_classes.len(),
         product_classes
@@ -52,24 +59,10 @@ pub async fn query_get_products(
             .collect::<Vec<String>>()
             .join(", ")
     );
+    log::info!(
+        "q_get_p_3rd_class ?countryId={}&secondCId={} done",
+        country_id,
+        second_cid
+    );
     Ok(product_classes)
-}
-
-async fn get(url: String) -> anyhow::Result<Vec<ProductThirdClass>> {
-    let client = reqwest::Client::new();
-    let request = client
-        .get(url)
-        //.header(AUTHORIZATION, "Bearer [AUTH_TOKEN]")
-        //.header(reqwest::header::CONTENT_TYPE, "application/json")
-        .header(reqwest::header::ACCEPT, "application/json")
-        .header(reqwest::header::REFERER, "https://www.yardforce-tools.com/");
-    log::debug!("Debug request={:?}", request);
-    let response = request.send().await?;
-    let text = response.text().await?;
-    log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<ProductThirdClass> =
-        serde_json::from_str(&text).expect("Failed to parse json response.");
-
-    log::debug!("data = {:#?} len={}", data, data.len());
-    Ok(data)
 }

@@ -1,5 +1,6 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 mod query_get_countries;
+pub mod query_url;
 mod write_to_file;
 
 #[tokio::main]

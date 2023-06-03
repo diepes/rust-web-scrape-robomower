@@ -1,6 +1,7 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
 pub mod query_get_first_class;
+use crate::query_url;
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
@@ -10,7 +11,7 @@ pub struct CountryRecord {
     pub country_name: String,
     #[serde(skip_serializing_if = "str::is_empty")]
     pub link: String,
-    #[serde(skip_deserializing)]  //add data later
+    #[serde(skip_deserializing)] //add data later
     pub first_class: Vec<query_get_first_class::ProductClass>,
 }
 
@@ -35,12 +36,15 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetCountry",
     );
-    let mut area_records = get(url).await?;
-    log::info!("Found {} countries", area_records.len(),);
+
+    let mut area_records: Vec<AreaRecord> =
+        serde_json::from_str(query_url::get(&url).await?.as_str())?;
+
+    log::info!("Found {} area's START", area_records.len(),);
     let mut my_futures: Vec<(
         &mut Vec<query_get_first_class::ProductClass>,
         tokio::task::JoinHandle<Result<Vec<query_get_first_class::ProductClass>, anyhow::Error>>,
-    )> = vec!();
+    )> = vec![];
     for area in &mut area_records {
         for country in &mut area.countries {
             let country_id = country.id;
@@ -53,25 +57,8 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
     }
     // retrieve mut class and add values from future query
     for (first_class, fut) in my_futures {
-        first_class.extend(fut.await??);  //1st? await, 2nd? result
+        first_class.extend(fut.await??); //1st? await, 2nd? result
     }
+    log::info!("Found {} area's done", area_records.len(),);
     Ok(area_records)
-}
-async fn get(url: String) -> anyhow::Result<Vec<AreaRecord>> {
-    let client = reqwest::Client::new();
-    let request = client
-        .get(url)
-        //.header(AUTHORIZATION, "Bearer [AUTH_TOKEN]")
-        //.header(reqwest::header::CONTENT_TYPE, "application/json")
-        .header(reqwest::header::ACCEPT, "application/json")
-        .header(reqwest::header::REFERER, "https://www.yardforce-tools.com/");
-    log::debug!("Debug request={:?}", request);
-    let response = request.send().await?;
-    let text = response.text().await?;
-    log::debug!("response = {:?}  len={}", text, text.len());
-    let data: Vec<AreaRecord> =
-        serde_json::from_str(&text).expect("Failed to parse json response.");
-
-    log::debug!("data = {:#?} len={}", data, data.len());
-    Ok(data)
 }
