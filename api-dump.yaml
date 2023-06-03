@@ -1,594 +1,1459 @@
-test msg:
-area_names:
-  International:
-    - name: English
-      id: 14
-      classes_1:
-        - id: 84
-          name: Robotic
-          details:
-            - thirdCatagory: Robotic Mower
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 598
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/e29dffa4-95d9-4111-ad82-5a7c37a497d4.jpg
-                Attributes:
-                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Cutting Width": "180 mm"
-                  "Cutting Height, min-max": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 596
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d1b90653-84e2-4914-ad06-bd697f589965.jpg
-                Attributes:
-                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Cutting Width": "180 mm"
-                  "Cutting Height, min-max": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 330
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/a2b4be56-b2cd-4f6f-b04c-d96c53232fa9.jpg
-                Attributes:
-                  "Battery": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Cutting Width": "180 mm"
-                  "Cutting Height, min-max": "20 - 60 mm"
-              - product_name: SA800PRO
-                product_id: 595
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d336c005-26b5-4b1a-b226-16f29373d671.jpg
-                Attributes:
-                  "Battery": "Lithium-Ion Battery, 28 V / 2.5 Ah"
-                  "Power Supply": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Cutting Width": "180 mm "
-                  "Cutting Height, min-max": "20 -60 mm"
-        - id: 1
-          name: Lawn Mower
-        - id: 2
-          name: Saw
-        - id: 5
-          name: Grass Trimmer
-        - id: 6
-          name: Hedge Trimmer
-        - id: 7
-          name: Blower & Vacuum
-        - id: 8
-          name: Shredder
-        - id: 9
-          name: Scarifier
-        - id: 11
-          name: Snow Thrower
-        - id: 12
-          name: Electric Pressure Washer
-        - id: 13
-          name: Petrol Pressure Washer
-        - id: 83
-          name: Cordless Pressure Washer
-  America:
-    - name: Canada
-      id: 15
-      classes_1:
-    - name: United States
-      id: 6
-      classes_1:
-        - id: 62
-          name: Cultivator
-        - id: 63
-          name: Edger
-        - id: 64
-          name: Shredder / Chippers
-        - id: 78
-          name: Petrol Pressure Washers
-        - id: 79
-          name: Electric Pressure Washers
-    - name: Brasil
-      id: 16
-      classes_1:
-  Asia & Oceania:
-    - name: Australia
-      id: 1
-      classes_1:
-        - id: 14
-          name:  Lawn Mower
-        - id: 97
-          name: Robotic
-          details:
-            - thirdCatagory: Robotic Mower
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 599
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/9e6eddf7-dc0f-4c54-9131-2f4dd021dfc7.jpg
-                Attributes:
-                  "Suitable for Lawn Area": "500 SQM"
-                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
-                  "Cutting Width": "180 mm"
-              - product_name: SA600H
-                product_id: 568
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/7c1e5bec-15ad-46ec-ac2c-b76b7dcc5802.jpg
-                Attributes:
-                  "Suitable for Lawn Area": "600 SQM"
-                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
-                  "Cutting Width": "180 mm"
-              - product_name: SC600ECO
-                product_id: 600
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/49e3dded-221d-40ef-b53e-8adb90b22016.jpg
-                Attributes:
-                  "Suitable for Lawn Area": "600 SQM"
-                  "Battery": "Lithium Battery, 28 V / 2.0 Ah"
-                  "Cutting Width": "180 mm"
-              - product_name: SA800PRO
-                product_id: 601
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/b7992fca-4f3f-4312-9ca8-a6bf3ceba5cc.jpg
-                Attributes:
-                  "Suitable for Lawn Area": "800 SQM"
-                  "Battery": "Lithium Battery, 28 V / 2.5 Ah"
-                  "Cutting Width": "180 mm "
-        - id: 87
-          name: Line Trimmer
-        - id: 88
-          name: Saw
-        - id: 90
-          name: Hedge Trimmer
-        - id: 103
-          name: Blower & Vacuum
-        - id: 104
-          name: Shredder
-        - id: 106
-          name: Electric Pressure Washer
-        - id: 107
-          name: Petrol Pressure Washer
-        - id: 108
-          name: Cordless Pressure Washer
-    - name: New Zealand
-      id: 21
-      classes_1:
-    - name: 中国
-      id: 25
-      classes_1:
-    - name: 日本
-      id: 9
-      classes_1:
-        - id: 16
-          name: 高枝チェーンソー
-        - id: 85
-          name: 芝刈り機
-        - id: 206
-          name: 耕うん機
-        - id: 207
-          name: バリカン
-        - id: 208
-          name: 枝シュレッダー
-        - id: 209
-          name: ブロワー&バキューム
-        - id: 210
-          name: スノースコップ
-  Europe:
-    - name: United Kingdom
-      id: 7
-      classes_1:
-        - id: 23
-          name: Lawn Mower
-        - id: 50
-          name: Chain Saw
-        - id: 51
-          name: Pruner
-        - id: 52
-          name: Brush Cutter
-        - id: 53
-          name: Grass Trimmer
-        - id: 54
-          name: Hedge Trimmer
-        - id: 55
-          name: Blower & Vacuum
-        - id: 56
-          name: Shredder
-        - id: 57
-          name: Scarifier
-        - id: 58
-          name: Tiller
-        - id: 59
-          name: Snow Thrower
-        - id: 24
-          name: Electric Pressure Washer
-        - id: 26
-          name: Petrol Pressure Washer
-    - name: Deutschland
-      id: 18
-      classes_1:
-        - id: 82
-          name: Robotermäher
-          details:
-            - thirdCatagory: Robotermäher
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 602
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/60fcc669-314c-4914-be66-2c12e81e8c41.jpg
-                Attributes:
-                  "Arbeitsbereich": "500 ㎡"
-                  "Schnittbreite": "18 cm"
-                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
-              - product_name: SC600ECO
-                product_id: 308
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/41bd6c8a-bc8e-44f6-a8d8-e9a54f405b5a.jpg
-                Attributes:
-                  "Arbeitsbereich": "600 ㎡"
-                  "Schnittbreite": "18 cm"
-                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
-              - product_name: SA900
-                product_id: 309
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/95ebf589-7fe1-46e8-8aad-552d652aca7e.jpg
-                Attributes:
-                  "Arbeitsbereich": "900 ㎡"
-                  "Schnittbreite": "18 cm"
-                  "Li-Ionen-Akku": "28 V / 2,9 Ah"
-              - product_name: SA600H
-                product_id: 293
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d6aa9fa7-fcda-409f-b3ce-17d21c22c086.jpg
-                Attributes:
-                  "Arbeitsbereich": "600 ㎡"
-                  "Schnittbreite": "18 cm"
-                  "Li-Ionen-Akku": "28 V / 2.0 Ah"
-              - product_name: SA800PRO
-                product_id: 603
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/1e60d493-1e9c-4e98-acc5-5760b6e8299c.jpg
-                Attributes:
-                  "Arbeitsbereich": "800 ㎡"
-                  "Schnittbreite": "18 cm"
-                  "Li-Ionen-Akku": "28 V / 2.5 Ah"
-        - id: 65
-          name: Rasenmäher
-        - id: 66
-          name: Kettensägen
-        - id: 86
-          name: Teleskop Astsägen
-        - id: 68
-          name: Freischneider
-        - id: 69
-          name: Rasentrimmer
-        - id: 70
-          name: Heckenscheren
-        - id: 67
-          name: Teleskop-Heckenscheren
-        - id: 71
-          name: Laubbläser und –sauger
-        - id: 72
-          name: Häcksler
-        - id: 73
-          name: Vertikutierer
-        - id: 75
-          name: Schneefräsen
-        - id: 76
-          name: Elektro-Hochdruckreiniger
-        - id: 77
-          name: Benzin-Hochdruckreiniger
-        - id: 126
-          name: Akku-Hochdruckreiniger
-    - name: España
-      id: 17
-      classes_1:
-        - id: 161
-          name: Robots
-          details:
-            - thirdCatagory: Robot cortacésped
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 730
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/b462c2ee-446a-4bb0-b9d5-1bb28e2d4def.jpg
-                Attributes:
-                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
-                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Anchura de corte": "180 mm"
-                  "Altura de corte, mín.-máx.": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 729
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/4e623672-5e31-4e58-a4fa-a4909540a42e.jpg
-                Attributes:
-                  "Batería": "Batería de ion de litio, 28 V/2,0 Ah"
-                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Anchura de corte": "180 mm"
-                  "Altura de corte, mín.-máx.": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 731
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d96ca4f4-b399-4801-aaee-3327afba75b4.jpg
-                Attributes:
-                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
-                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Anchura de corte": "180 mm"
-                  "Altura de corte, mín.-máx.": "20 - 60 mm"
-              - product_name: SA800PRO
-                product_id: 732
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/eea19ccf-1b70-4c24-ac88-e08ffe1a4d62.jpg
-                Attributes:
-                  "Batería": "Batería de iones de litio, 28 V / 2.0 Ah"
-                  "Alimentación eléctrica": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Anchura de corte": "180 mm "
-                  "Altura de corte, mín.-máx.": "20 -60 mm"
-        - id: 162
-          name: Cortacéspedes
-        - id: 163
-          name: Sierras
-        - id: 164
-          name: Pruner
-        - id: 165
-          name: Brush Cutter
-        - id: 166
-          name:  Cortabordes
-        - id: 167
-          name: Cortasetos
-        - id: 168
-          name: Sopladores y aspiradores
-        - id: 169
-          name: Trituradoras
-        - id: 170
-          name: Escarificadores
-        - id: 171
-          name: Tiller
-        - id: 172
-          name: Quitanieves
-        - id: 173
-          name: Limpiador a presión eléctrico
-        - id: 174
-          name: Limpiador a presión a gasolina
-        - id: 175
-          name: Limpiador a presión inalámbrico
-    - name: France
-      id: 8
-      classes_1:
-        - id: 130
-          name: Robot-tondeuse
-          details:
-            - thirdCatagory: Robot-tondeuse
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 607
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/89387446-1f3a-4135-9c3e-e1d7a0e7e61c.jpg
-                Attributes:
-                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
-                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
-                  "Largeur de coupe": "180 mm"
-                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 606
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/3cadefe2-9b9c-4c79-85df-13d03c0f8624.jpg
-                Attributes:
-                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
-                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
-                  "Largeur de coupe": "180 mm"
-                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 604
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/1afceea2-8f66-460a-a15f-4d7093fccc41.jpg
-                Attributes:
-                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.0 Ah"
-                  "Source d'alimentation": "Entrée 110-240 V c.a., 50/60 Hz, Sortie 32 V / 1,5 A c.c. (IP67)"
-                  "Largeur de coupe": "180 mm"
-                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
-              - product_name: SA800PRO
-                product_id: 605
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/3c89aad7-bce7-40eb-be38-8bd3c6456fc5.jpg
-                Attributes:
-                  "Batterie": "Batterie Lithium-Ion, 28 V / 2.5 Ah"
-                  "Source d'alimentation": "Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)"
-                  "Largeur de coupe": "180 mm "
-                  "Hauteur de coupe, min.-max.": "20 - 60 mm"
-        - id: 131
-          name: Tondeuse
-        - id: 132
-          name: Tronçonneuse et élagueuse
-        - id: 135
-          name: Coupe-bordure
-        - id: 136
-          name: Taille-haie
-        - id: 137
-          name: Aspirateur souffleur
-        - id: 138
-          name: Broyeur
-        - id: 139
-          name: Scarificateur
-        - id: 140
-          name: Tiller
-        - id: 141
-          name: Fraise à neige
-        - id: 142
-          name: Nettoyeurs haute pression électriques
-        - id: 143
-          name: Nettoyeurs haute pression à essence
-        - id: 144
-          name: Nettoyeurs haute pression sans fil
-    - name: Italia
-      id: 19
-      classes_1:
-        - id: 145
-          name: Robot
-          details:
-            - thirdCatagory: Robotic Mower
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 682
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/68b9f38e-50f4-4d6c-947c-2ecf0ebe1f33.jpg
-                Attributes:
-                  "Batteria": "Batteria agli ioni di litio, 28 V/2.0 Ah"
-                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
-                  "Velocità a vuoto": "180 mm"
-                  "Ampiezza di taglio": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 681
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/16b917de-9403-4e00-8e47-d67eeba9f738.jpg
-                Attributes:
-                  "Batteria": "Batteria agli ioni di litio, 28 V/2.0 Ah"
-                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
-                  "Velocità a vuoto": "180 mm"
-                  "Ampiezza di taglio": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 679
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/f299ad40-f168-4746-a5c1-f16aedd7a81b.jpg
-                Attributes:
-                  "Batteria": "Batteria agli ioni di litio, 28 V/2,0 Ah"
-                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
-                  "Velocità a vuoto": "3500 RPM"
-                  "Ampiezza di taglio": "180 mm"
-              - product_name: SA800PRO
-                product_id: 680
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/276212f2-5e12-4b1d-b6f9-094c776df423.jpg
-                Attributes:
-                  "Batteria": "Batteria agli ioni di litio, 28 V/2.5 Ah"
-                  "Alimentazione elettrica": "Ingresso 110-240 V CA, 50 / 60 HzUscita 32 V / 1,5 A CC (IP67)"
-                  "Velocità a vuoto": "180 mm "
-                  "Ampiezza di taglio": "20 -60 mm"
-        - id: 146
-          name: Tosaerba
-        - id: 147
-          name: Motoseghe
-        - id: 150
-          name: Decespugliatori
-        - id: 151
-          name: Tagliasiepi
-        - id: 152
-          name: Soffiatori e aspiratori
-        - id: 153
-          name: Trituratori
-        - id: 154
-          name: Scarificatori
-        - id: 156
-          name: Sgombraneve
-        - id: 158
-          name: Idropulitrici elettriche
-        - id: 159
-          name: Idropulitrici a benzina
-        - id: 160
-          name: Idropulitrici cordless
-    - name: Netherlands
-      id: 23
-      classes_1:
-        - id: 176
-          name: Robotic
-          details:
-            - thirdCatagory: Robotic Mower
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 832
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/e1d0a2fd-df6e-4694-966f-2067babb9b7f.jpg
-                Attributes:
-                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Snelheid zonder belasting": "180 mm"
-                  "Maaibreedte": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 831
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/0d09431f-3798-4675-a4d1-8c8a140a5150.jpg
-                Attributes:
-                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Snelheid zonder belasting": "180 mm"
-                  "Maaibreedte": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 829
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/4c45f208-56d1-4f60-a6a8-0f7fb8372ff0.jpg
-                Attributes:
-                  "Accu": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Snelheid zonder belasting": "180 mm"
-                  "Maaibreedte": "20 - 60 mm"
-              - product_name: SA800PRO
-                product_id: 830
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/32ffc090-fbbd-4109-9b3c-980578672fc7.jpg
-                Attributes:
-                  "Accu": "Lithium-Ion Battery, 28 V / 2.5 Ah"
-                  "Voeding": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Snelheid zonder belasting": "180 mm "
-                  "Maaibreedte": "20 -60 mm"
-        - id: 177
-          name: Lawn Mower
-        - id: 178
-          name: Saw
-        - id: 179
-          name: Pruner
-        - id: 180
-          name: Brush Cutter
-        - id: 181
-          name: Grass Trimmer
-        - id: 182
-          name: Hedge Trimmer
-        - id: 183
-          name: Blower & Vacuum
-        - id: 184
-          name: Shredder
-        - id: 185
-          name: Scarifier
-        - id: 186
-          name: Tiller
-        - id: 187
-          name: Snow Thrower
-        - id: 188
-          name: Electric Pressure Washer
-        - id: 189
-          name: Petrol Pressure Washer
-        - id: 190
-          name: Cordless Pressure Washer
-    - name: Sweden
-      id: 24
-      classes_1:
-        - id: 191
-          name: Robotic
-          details:
-            - thirdCatagory: Robotic Mower
-              productsInCatagory:
-              - product_name: SA500ECO
-                product_id: 828
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/999d7bca-0e15-4966-90e4-c8ea8d24659c.jpg
-                Attributes:
-                  "Batteri": "Lithium-Ion Battery, 28 V / 2.0 Ah"
-                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Hastighet utan belastning": "180 mm"
-                  "Skärbredd": "20 - 60 mm"
-              - product_name: SC600ECO
-                product_id: 827
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/d4cee111-6399-454a-b236-6ebe83fb703b.jpg
-                Attributes:
-                  "Batteri": "Litium jon batteri, 28 V / 2.0 Ah"
-                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Hastighet utan belastning": "180 mm"
-                  "Skärbredd": "20 - 60 mm"
-              - product_name: SA600H
-                product_id: 825
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/709581c1-0341-4458-9a45-6e79153f979c.jpg
-                Attributes:
-                  "Batteri": "Litiumjonbatteri, 28 V/2.0 Ah"
-                  "Strömförsörjning": "Ineffekt 110-240 V AC, 50/60 Hz, uteffekt 32 V/1,5 A  d.c. (IP67)"
-                  "Hastighet utan belastning": "3500 RPM"
-                  "Skärbredd": "180 mm"
-              - product_name: SA800PRO
-                product_id: 826
-                icon_img_url: https://www.yardforce-tools.com/ProductFiles/a111db1b-cb80-4708-bc0f-6690dfc048c3.jpg
-                Attributes:
-                  "Batteri": "Litium jon batteri, 28 V / 2.5 Ah"
-                  "Strömförsörjning": "Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)"
-                  "Hastighet utan belastning": "180 mm "
-                  "Skärbredd": "20 -60 mm"
-        - id: 192
-          name: Lawn Mower
-        - id: 193
-          name: Saw
-        - id: 194
-          name: Pruner
-        - id: 195
-          name: Brush Cutter
-        - id: 196
-          name: Grass Trimmer
-        - id: 197
-          name: Hedge Trimmer
-        - id: 198
-          name: Blower & Vacuum
-        - id: 199
-          name: Shredder
-        - id: 200
-          name: Scarifier
-        - id: 201
-          name: Tiller
-        - id: 202
-          name: Snow Thrower
-        - id: 203
-          name: Electric Pressure Washer
-        - id: 204
-          name: Petrol Pressure Washer
-        - id: 205
-          name: Cordless Pressure Washer
+api_data:
+- AreaName: International
+  Countrys:
+  - Id: 14
+    CountryName: English
+    FirstClass:
+    - Id: 1
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 84
+        ClassName: Robotic
+        IconImg1: 914fb400-0473-47f7-8862-a2c38ae301d0.jpg
+        IconImg2: c422e2c2-4885-46d9-8a99-1815d543bfc1.jpg
+        ThirdClass:
+        - ThridClassName: Robotic Mower
+          Products:
+          - ProductId: 598
+            ProductName: SA500ECO
+            IconImgUrl: e29dffa4-95d9-4111-ad82-5a7c37a497d4.jpg
+            ThirdClassId: 223
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Power Supply
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Height, min-max
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 596
+            ProductName: SC600ECO
+            IconImgUrl: d1b90653-84e2-4914-ad06-bd697f589965.jpg
+            ThirdClassId: 223
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Power Supply
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Height, min-max
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 330
+            ProductName: SA600H
+            IconImgUrl: a2b4be56-b2cd-4f6f-b04c-d96c53232fa9.jpg
+            ThirdClassId: 223
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Power Supply
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Height, min-max
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 595
+            ProductName: SA800PRO
+            IconImgUrl: d336c005-26b5-4b1a-b226-16f29373d671.jpg
+            ThirdClassId: 223
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium-Ion Battery, 28 V / 2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Power Supply
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Height, min-max
+              AttrValue: 20 -60 mm
+              IsSpecial: false
+      - Id: 1
+        ClassName: Lawn Mower
+        IconImg1: 18ed591e-83bc-4317-bf6d-6dfdefd5bd87.jpg
+        IconImg2: 95afa7c2-61ba-4e13-b627-8c9db53f1769.jpg
+        ThirdClass: []
+      - Id: 2
+        ClassName: Saw
+        IconImg1: fc78860f-98ae-4fb9-b9de-8f2706dee00d.jpg
+        IconImg2: cb867b02-e7b9-41f9-9515-3f3a9376b3a3.jpg
+        ThirdClass: []
+      - Id: 5
+        ClassName: Grass Trimmer
+        IconImg1: c0ff849a-c7fd-4e9a-b098-8e366693756f.jpg
+        IconImg2: 5736abf1-7739-423a-b8e6-94a52fa668df.jpg
+        ThirdClass: []
+      - Id: 6
+        ClassName: Hedge Trimmer
+        IconImg1: f6f9d4b7-6ec5-4c24-96bc-46f15e952a3f.jpg
+        IconImg2: 63c263e6-96c2-44b5-b30d-7b14c41efeee.jpg
+        ThirdClass: []
+      - Id: 7
+        ClassName: Blower & Vacuum
+        IconImg1: 79a596d7-dfc4-4688-b439-b8bd3d4dc2af.jpg
+        IconImg2: 2d0fc09d-e3c3-4887-9d50-72d0f97a73e6.jpg
+        ThirdClass: []
+      - Id: 8
+        ClassName: Shredder
+        IconImg1: 116b8854-4c8c-48ce-b2dc-b32ac68f0f04.jpg
+        IconImg2: 407ebbd7-4073-4769-8cd4-745108920e13.jpg
+        ThirdClass: []
+      - Id: 9
+        ClassName: Scarifier
+        IconImg1: 359b2cbf-4e35-42cc-b207-b030fb6867e5.png
+        IconImg2: 7c08711e-5c22-4b58-a337-301dee5b5559.png
+        ThirdClass: []
+      - Id: 11
+        ClassName: Snow Thrower
+        IconImg1: bd705bb6-b5f6-4f85-b425-c9bce758cb93.jpg
+        IconImg2: 294b33f8-8dbf-477d-8526-22f4f4c4d0f8.jpg
+        ThirdClass: []
+    - Id: 2
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 12
+        ClassName: Electric Pressure Washer
+        IconImg1: 7a6b5032-388b-40ba-ad14-3867f6184073.jpg
+        IconImg2: 4f96466e-ec8b-47f2-989b-d0ae8a6dfc1a.jpg
+        ThirdClass: []
+      - Id: 13
+        ClassName: Petrol Pressure Washer
+        IconImg1: 482e9839-e70c-43dc-b9c3-bf573d1609aa.jpg
+        IconImg2: fb1518eb-a2b5-4852-aa7e-c084fb105d5f.jpg
+        ThirdClass: []
+      - Id: 83
+        ClassName: Cordless Pressure Washer
+        IconImg1: e31dd5b5-9750-4b75-b767-0b3a97e6301c.jpg
+        IconImg2: ebd485d6-645b-48da-b509-899d4909c739.jpg
+        ThirdClass: []
+- AreaName: America
+  Countrys:
+  - Id: 15
+    CountryName: Canada
+    FirstClass: []
+  - Id: 6
+    CountryName: United States
+    FirstClass:
+    - Id: 8
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 62
+        ClassName: Cultivator
+        IconImg1: 7fb459d8-e4d4-4ed4-b6d4-40cb2028ae39.png
+        IconImg2: 106e4dce-29ed-4da9-895c-a267f9d6b06b.png
+        ThirdClass: []
+      - Id: 63
+        ClassName: Edger
+        IconImg1: 4a6a0f38-bca7-4f00-a780-5fa663e5e5aa.png
+        IconImg2: 5dc39f25-2a63-42cb-9119-1aa6d5f21798.png
+        ThirdClass: []
+      - Id: 64
+        ClassName: Shredder / Chippers
+        IconImg1: 83de8617-8456-45d9-a7b1-58d901353ff7.png
+        IconImg2: 2feb05e0-da2a-429d-84bd-2aa8adef91c8.png
+        ThirdClass: []
+    - Id: 15
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 78
+        ClassName: Petrol Pressure Washers
+        IconImg1: c1b205c9-967b-49e4-92b1-aa81fce4fafd.png
+        IconImg2: 6dbb96e3-d7cb-4a7e-9588-709e85c890df.png
+        ThirdClass: []
+      - Id: 79
+        ClassName: Electric Pressure Washers
+        IconImg1: 81bd72d5-e632-4555-af07-71996c0fc212.png
+        IconImg2: dde2c520-2154-4dc1-9ecd-4be127530feb.png
+        ThirdClass: []
+  - Id: 16
+    CountryName: Brasil
+    FirstClass: []
+- AreaName: Asia & Oceania
+  Countrys:
+  - Id: 1
+    CountryName: Australia
+    FirstClass:
+    - Id: 3
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 14
+        ClassName: ' Lawn Mower'
+        IconImg1: c77907ad-4c77-4b43-8a54-a53a1319e901.png
+        IconImg2: 6dd75303-7c93-4bc2-bfa7-94ab064ad4eb.png
+        ThirdClass: []
+      - Id: 97
+        ClassName: Robotic
+        IconImg1: e532e5f7-a354-41cc-b900-7acefc059558.jpg
+        IconImg2: 17bb4d06-ee6c-4135-b62e-19162027e165.jpg
+        ThirdClass:
+        - ThridClassName: Robotic Mower
+          Products:
+          - ProductId: 599
+            ProductName: SA500ECO
+            IconImgUrl: 9e6eddf7-dc0f-4c54-9131-2f4dd021dfc7.jpg
+            ThirdClassId: 347
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Suitable for Lawn Area
+              AttrValue: 500 SQM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+          - ProductId: 568
+            ProductName: SA600H
+            IconImgUrl: 7c1e5bec-15ad-46ec-ac2c-b76b7dcc5802.jpg
+            ThirdClassId: 347
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Suitable for Lawn Area
+              AttrValue: 600 SQM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+          - ProductId: 600
+            ProductName: SC600ECO
+            IconImgUrl: 49e3dded-221d-40ef-b53e-8adb90b22016.jpg
+            ThirdClassId: 347
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Suitable for Lawn Area
+              AttrValue: 600 SQM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: 180 mm
+              IsSpecial: false
+          - ProductId: 601
+            ProductName: SA800PRO
+            IconImgUrl: b7992fca-4f3f-4312-9ca8-a6bf3ceba5cc.jpg
+            ThirdClassId: 347
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Suitable for Lawn Area
+              AttrValue: 800 SQM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Battery
+              AttrValue: Lithium Battery, 28 V / 2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Cutting Width
+              AttrValue: '180 mm '
+              IsSpecial: false
+      - Id: 87
+        ClassName: Line Trimmer
+        IconImg1: eda2c1f3-5855-465f-99f5-3b59f1abf2b8.png
+        IconImg2: cb05ee01-7c62-41d3-b7a5-615c37013516.png
+        ThirdClass: []
+      - Id: 88
+        ClassName: Saw
+        IconImg1: 5290d658-0b9a-40d1-ad3e-b1e8ba9158de.png
+        IconImg2: ee815576-d81f-4178-9308-bfa32b26c6e2.png
+        ThirdClass: []
+      - Id: 90
+        ClassName: Hedge Trimmer
+        IconImg1: caa0b061-0fc9-4828-8691-61dabfceff40.png
+        IconImg2: e65f4c35-6501-4182-87b7-94070f35d5ea.png
+        ThirdClass: []
+      - Id: 103
+        ClassName: 'Blower & Vacuum    '
+        IconImg1: ca324874-578f-434e-bb44-4aba8fa5684f.jpg
+        IconImg2: 79ace2d5-1c5b-4b48-9cac-7653dc6832ec.jpg
+        ThirdClass: []
+      - Id: 104
+        ClassName: Shredder
+        IconImg1: e30a5f67-ec12-4c3a-b45a-858b4928221d.jpg
+        IconImg2: ed567068-407b-4e73-9c43-1d55b980b358.jpg
+        ThirdClass: []
+    - Id: 18
+      ClassName: Pressure Washer
+      SecondClass:
+      - Id: 106
+        ClassName: Electric Pressure Washer
+        IconImg1: f3079f59-9c04-410a-a459-025b483e71cc.jpg
+        IconImg2: b035789c-666f-429b-ae98-223e4178963a.jpg
+        ThirdClass: []
+      - Id: 107
+        ClassName: Petrol Pressure Washer
+        IconImg1: 89d6c0ff-ed45-48e3-b070-73eb63923ad2.jpg
+        IconImg2: 695f90c8-4561-436c-b4c2-c55c020c1e2a.jpg
+        ThirdClass: []
+      - Id: 108
+        ClassName: Cordless Pressure Washer
+        IconImg1: 3fd40cd8-dd24-4725-a629-51cac40988e8.jpg
+        IconImg2: 81805102-ec0d-4f39-b86f-f5f088780b60.jpg
+        ThirdClass: []
+  - Id: 21
+    CountryName: New Zealand
+    FirstClass: []
+  - Id: 25
+    CountryName: 中国
+    Link: https://www.yardforce.com.cn
+    FirstClass: []
+  - Id: 9
+    CountryName: 日本
+    Link: https://www.yardforcejapan.com
+    FirstClass:
+    - Id: 5
+      ClassName: アウトドア製品
+      SecondClass:
+      - Id: 16
+        ClassName: 高枝チェーンソー
+        IconImg1: f8dff87e-fb33-4df8-8e73-052c4ff15edb.png
+        IconImg2: 9894fd0b-9373-4ede-9b5b-ecb90e824490.png
+        ThirdClass: []
+      - Id: 85
+        ClassName: 芝刈り機
+        IconImg1: 321967d2-3c98-4c94-9a56-a2c86c6962bc.png
+        IconImg2: fdbbb48a-f0d5-4af6-92b4-35e208c9f5be.png
+        ThirdClass: []
+      - Id: 206
+        ClassName: 耕うん機
+        IconImg1: fb207523-41e3-433c-8e05-10a65b147bef.png
+        IconImg2: 3c9c8797-068a-48a6-aca9-70ab5103dce5.png
+        ThirdClass: []
+      - Id: 207
+        ClassName: バリカン
+        IconImg1: 763a27ca-74b0-43e1-ab98-bc20a0ff5804.png
+        IconImg2: 42431543-5ade-4dc0-b0bc-a65fd74f9e12.png
+        ThirdClass: []
+      - Id: 208
+        ClassName: 枝シュレッダー
+        IconImg1: 05a16d59-1509-4927-9a98-7596d2dc9bfd.png
+        IconImg2: 758ebebc-4417-41de-8270-aca8f8b1e756.png
+        ThirdClass: []
+      - Id: 209
+        ClassName: ブロワー&バキューム
+        IconImg1: 9926b765-088a-4b21-8aee-aa80a702aab8.png
+        IconImg2: b70dd813-f057-48c6-b4e2-4ec5a1a4cb4e.png
+        ThirdClass: []
+      - Id: 210
+        ClassName: スノースコップ
+        IconImg1: adeec12f-3c80-4469-8065-9e653b7f17a4.png
+        IconImg2: 33f27ce6-2698-41ac-8032-874b29f66f99.png
+        ThirdClass: []
+- AreaName: Europe
+  Countrys:
+  - Id: 7
+    CountryName: United Kingdom
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 6
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 23
+        ClassName: Lawn Mower
+        IconImg1: ''
+        IconImg2: ''
+        ThirdClass: []
+      - Id: 50
+        ClassName: Chain Saw
+        IconImg1: 25e41843-1266-4a4b-9dd7-ce0ed511239f.jpg
+        IconImg2: 5afb5928-fcb6-4681-8f21-4b1f0ff750f3.jpg
+        ThirdClass: []
+      - Id: 51
+        ClassName: Pruner
+        IconImg1: 0ef5929c-3819-42eb-a40d-407280c7d29b.jpg
+        IconImg2: 4972478d-0d20-4fbd-8583-f7717979d0e3.jpg
+        ThirdClass: []
+      - Id: 52
+        ClassName: Brush Cutter
+        IconImg1: c7a290c9-b9f9-4c27-82c1-657d54fa3f15.jpg
+        IconImg2: 3116230d-39bc-4446-9ab6-990583a4d5a2.jpg
+        ThirdClass: []
+      - Id: 53
+        ClassName: Grass Trimmer
+        IconImg1: 4c1c1de0-2a12-4913-9ed1-612e851942a7.jpg
+        IconImg2: 46213475-870e-43ef-89a1-68baaa6e6b92.jpg
+        ThirdClass: []
+      - Id: 54
+        ClassName: Hedge Trimmer
+        IconImg1: 0ff14502-831d-4af8-a097-bf653ea94313.jpg
+        IconImg2: 12922390-e603-4b2c-96e7-4c7a61039bef.jpg
+        ThirdClass: []
+      - Id: 55
+        ClassName: Blower & Vacuum
+        IconImg1: dca741f6-f98e-44e3-8f50-37f67b499982.jpg
+        IconImg2: b8486373-e994-4272-9314-333d74c6bc1f.jpg
+        ThirdClass: []
+      - Id: 56
+        ClassName: Shredder
+        IconImg1: 50c37339-cf95-4c7f-a1b6-f83af11dd66c.jpg
+        IconImg2: fbd28407-4522-4147-a4e8-82401b0db05b.jpg
+        ThirdClass: []
+      - Id: 57
+        ClassName: Scarifier
+        IconImg1: fb9aed65-dfda-4437-978d-12aced998e0c.jpg
+        IconImg2: 330818a7-9405-4f5a-bace-da4de37a9d52.jpg
+        ThirdClass: []
+      - Id: 58
+        ClassName: Tiller
+        IconImg1: 904f8c56-b3ac-4900-be6b-a36de98f59a0.jpg
+        IconImg2: a6aff90b-2e9b-4710-b5e8-e7b6caa1db50.jpg
+        ThirdClass: []
+      - Id: 59
+        ClassName: Snow Thrower
+        IconImg1: 6ea74a0c-db5d-48be-99e1-8cba2c25f697.jpg
+        IconImg2: 3a709cc7-a87c-4600-91b7-2daea47706b9.jpg
+        ThirdClass: []
+    - Id: 7
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 24
+        ClassName: Electric Pressure Washer
+        IconImg1: ''
+        IconImg2: ''
+        ThirdClass: []
+      - Id: 26
+        ClassName: Petrol Pressure Washer
+        IconImg1: ''
+        IconImg2: ''
+        ThirdClass: []
+  - Id: 18
+    CountryName: Deutschland
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 10
+      ClassName: GERÄTE FÜR DEN GARTEN
+      SecondClass:
+      - Id: 82
+        ClassName: Robotermäher
+        IconImg1: b4db2dad-5d47-4f9b-8288-44910eb354a6.jpg
+        IconImg2: 4801f22c-3e62-4502-8963-b4b07a693425.jpg
+        ThirdClass:
+        - ThridClassName: Robotermäher
+          Products:
+          - ProductId: 602
+            ProductName: SA500ECO
+            IconImgUrl: 60fcc669-314c-4914-be66-2c12e81e8c41.jpg
+            ThirdClassId: 220
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Arbeitsbereich
+              AttrValue: 500 ㎡
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Schnittbreite
+              AttrValue: 18 cm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Li-Ionen-Akku
+              AttrValue: 28 V / 2.0 Ah
+              IsSpecial: false
+          - ProductId: 308
+            ProductName: SC600ECO
+            IconImgUrl: 41bd6c8a-bc8e-44f6-a8d8-e9a54f405b5a.jpg
+            ThirdClassId: 220
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Arbeitsbereich
+              AttrValue: 600 ㎡
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Schnittbreite
+              AttrValue: 18 cm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Li-Ionen-Akku
+              AttrValue: 28 V / 2.0 Ah
+              IsSpecial: false
+          - ProductId: 309
+            ProductName: SA900
+            IconImgUrl: 95ebf589-7fe1-46e8-8aad-552d652aca7e.jpg
+            ThirdClassId: 220
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Arbeitsbereich
+              AttrValue: 900 ㎡
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Schnittbreite
+              AttrValue: 18 cm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Li-Ionen-Akku
+              AttrValue: 28 V / 2,9 Ah
+              IsSpecial: false
+          - ProductId: 293
+            ProductName: SA600H
+            IconImgUrl: d6aa9fa7-fcda-409f-b3ce-17d21c22c086.jpg
+            ThirdClassId: 220
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Arbeitsbereich
+              AttrValue: 600 ㎡
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Schnittbreite
+              AttrValue: 18 cm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Li-Ionen-Akku
+              AttrValue: 28 V / 2.0 Ah
+              IsSpecial: false
+          - ProductId: 603
+            ProductName: SA800PRO
+            IconImgUrl: 1e60d493-1e9c-4e98-acc5-5760b6e8299c.jpg
+            ThirdClassId: 220
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Arbeitsbereich
+              AttrValue: 800 ㎡
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Schnittbreite
+              AttrValue: 18 cm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Li-Ionen-Akku
+              AttrValue: 28 V / 2.5 Ah
+              IsSpecial: false
+      - Id: 65
+        ClassName: Rasenmäher
+        IconImg1: 79334b2e-7a7b-4e73-be73-36ad8896871f.jpg
+        IconImg2: 2b073c76-75de-4d4a-8c30-ba6b42f40abb.jpg
+        ThirdClass: []
+      - Id: 66
+        ClassName: Kettensägen
+        IconImg1: 3b225ba4-dd76-4b4a-9d8c-7e803058c2bb.jpg
+        IconImg2: a348f247-1988-40fa-a3d0-31f147cf4e85.jpg
+        ThirdClass: []
+      - Id: 86
+        ClassName: Teleskop Astsägen
+        IconImg1: 1e1fc0cb-352e-4bff-afe8-93ae38f0bdf6.png
+        IconImg2: 781ed86c-1e7c-4232-8d0c-43d7e774d0c3.png
+        ThirdClass: []
+      - Id: 68
+        ClassName: Freischneider
+        IconImg1: e6cb1f1a-2d25-4fb3-836e-ce82da1f533d.jpg
+        IconImg2: 192defae-7333-4cd5-b092-12c00f1b74ae.jpg
+        ThirdClass: []
+      - Id: 69
+        ClassName: Rasentrimmer
+        IconImg1: b94992e0-755d-4f3e-b72e-e8311613c07b.jpg
+        IconImg2: 243d5afa-e0b5-4c01-abd5-ece955b566a3.jpg
+        ThirdClass: []
+      - Id: 70
+        ClassName: Heckenscheren
+        IconImg1: b6f6ebec-7dd3-4d6f-978d-3e9506ae9195.jpg
+        IconImg2: 5c5ecef1-4656-4151-84f0-cbc1b62feab0.jpg
+        ThirdClass: []
+      - Id: 67
+        ClassName: Teleskop-Heckenscheren
+        IconImg1: d5f545ba-aaae-4114-a903-be1d8179b696.jpg
+        IconImg2: d8bb34d9-552a-45c5-ab07-795b87803f29.jpg
+        ThirdClass: []
+      - Id: 71
+        ClassName: Laubbläser und –sauger
+        IconImg1: bfe441cd-a2ab-4389-ab34-19e568f3f13f.jpg
+        IconImg2: f7203efd-1901-41ed-890b-dc6fe962f706.jpg
+        ThirdClass: []
+      - Id: 72
+        ClassName: Häcksler
+        IconImg1: 2c83dd5b-7667-4d94-9bc6-cd23454c0b5c.jpg
+        IconImg2: 665b5eeb-7245-46f5-81cc-168d9eb96d06.jpg
+        ThirdClass: []
+      - Id: 73
+        ClassName: Vertikutierer
+        IconImg1: afcbe202-9aa7-402f-816e-2b1ec43e1dc3.png
+        IconImg2: 30606b09-24bb-4934-bfc4-fd24ca54fa3e.png
+        ThirdClass: []
+      - Id: 75
+        ClassName: Schneefräsen
+        IconImg1: 2c2468e1-544c-44a7-8e86-71764a9e1b4d.jpg
+        IconImg2: f1d76bed-7888-437c-9a76-d016c84e2b4c.jpg
+        ThirdClass: []
+    - Id: 11
+      ClassName: HOCHDRUCKREINIGER
+      SecondClass:
+      - Id: 76
+        ClassName: Elektro-Hochdruckreiniger
+        IconImg1: a91f5d53-fcb4-4238-8de7-af81d8cfe479.jpg
+        IconImg2: 03763195-a51e-418a-bf30-6a71826fd13b.jpg
+        ThirdClass: []
+      - Id: 77
+        ClassName: Benzin-Hochdruckreiniger
+        IconImg1: 47db8375-0f7b-4df3-9801-de01386f6883.jpg
+        IconImg2: 68f8bf51-0ffd-48bc-9539-1254586b033b.jpg
+        ThirdClass: []
+      - Id: 126
+        ClassName: Akku-Hochdruckreiniger
+        IconImg1: e546b327-1356-41b6-9a59-b4989b6e2902.jpg
+        IconImg2: e239537a-b9ea-491f-bbbf-3d737eb301e0.jpg
+        ThirdClass: []
+  - Id: 17
+    CountryName: España
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 23
+      ClassName: Productos para uso en exteriores
+      SecondClass:
+      - Id: 161
+        ClassName: Robots
+        IconImg1: 46495ce3-2ba0-4a5c-bac5-482e024b0773.jpg
+        IconImg2: 54aef0c0-3332-44da-82fa-c91f2c055da5.jpg
+        ThirdClass:
+        - ThridClassName: Robot cortacésped
+          Products:
+          - ProductId: 730
+            ProductName: SA500ECO
+            IconImgUrl: b462c2ee-446a-4bb0-b9d5-1bb28e2d4def.jpg
+            ThirdClassId: 430
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batería
+              AttrValue: Batería de iones de litio, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentación eléctrica
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Anchura de corte
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Altura de corte, mín.-máx.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 729
+            ProductName: SA600H
+            IconImgUrl: 4e623672-5e31-4e58-a4fa-a4909540a42e.jpg
+            ThirdClassId: 430
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batería
+              AttrValue: Batería de ion de litio, 28 V/2,0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentación eléctrica
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Anchura de corte
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Altura de corte, mín.-máx.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 731
+            ProductName: SC600ECO
+            IconImgUrl: d96ca4f4-b399-4801-aaee-3327afba75b4.jpg
+            ThirdClassId: 430
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batería
+              AttrValue: Batería de iones de litio, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentación eléctrica
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Anchura de corte
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Altura de corte, mín.-máx.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 732
+            ProductName: SA800PRO
+            IconImgUrl: eea19ccf-1b70-4c24-ac88-e08ffe1a4d62.jpg
+            ThirdClassId: 430
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batería
+              AttrValue: Batería de iones de litio, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentación eléctrica
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Anchura de corte
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Altura de corte, mín.-máx.
+              AttrValue: 20 -60 mm
+              IsSpecial: false
+      - Id: 162
+        ClassName: Cortacéspedes
+        IconImg1: c5edef4f-a65c-4f4e-beba-1b1a51d85729.jpg
+        IconImg2: 85d2ff34-7411-4f47-bdfb-c64d9a710327.jpg
+        ThirdClass: []
+      - Id: 163
+        ClassName: 'Sierras '
+        IconImg1: 4d30068e-83e3-48c6-87f8-9fcd648f208e.jpg
+        IconImg2: efba6c82-8bc3-4926-82fd-9eeb8ff74d4e.jpg
+        ThirdClass: []
+      - Id: 164
+        ClassName: Pruner
+        IconImg1: 6cd0475c-76c8-4f24-81e3-83a1a85aca75.jpg
+        IconImg2: aad11efe-85ad-4421-a62d-b8d8aab76797.jpg
+        ThirdClass: []
+      - Id: 165
+        ClassName: Brush Cutter
+        IconImg1: ed044942-69f5-45da-856a-865a8ecf9a37.jpg
+        IconImg2: 509532e9-cc7c-4b51-b220-5d62e34929ec.jpg
+        ThirdClass: []
+      - Id: 166
+        ClassName: ' Cortabordes         '
+        IconImg1: 75f9682f-12b1-4479-beda-089bb22eb7e6.jpg
+        IconImg2: 47771d9d-b50b-4f25-aaef-e16c16f416f8.jpg
+        ThirdClass: []
+      - Id: 167
+        ClassName: Cortasetos
+        IconImg1: 2452ac53-597c-4451-9191-b2cc01684514.jpg
+        IconImg2: 23d25180-f3cc-4d29-8a4b-60880bdd5816.jpg
+        ThirdClass: []
+      - Id: 168
+        ClassName: 'Sopladores y aspiradores       '
+        IconImg1: 2fd6caaf-35ac-4160-8b76-c0875a87955c.jpg
+        IconImg2: 73dbb3ad-410f-4e90-900f-ae6003b7607b.jpg
+        ThirdClass: []
+      - Id: 169
+        ClassName: Trituradoras
+        IconImg1: 4f72020b-3763-4885-a5dc-bc8e9be2a448.jpg
+        IconImg2: 1ecf8a2e-22e7-4f11-9550-86678c214f2c.jpg
+        ThirdClass: []
+      - Id: 170
+        ClassName: 'Escarificadores '
+        IconImg1: e43894f0-cd96-4797-b082-816af11dcab4.png
+        IconImg2: 34306872-4194-49bc-b653-4de3e469013e.png
+        ThirdClass: []
+      - Id: 171
+        ClassName: Tiller
+        IconImg1: af39f372-b162-4afc-b076-26c821e3fad8.jpg
+        IconImg2: 3bcbd082-c352-4229-b41e-c4258227a541.jpg
+        ThirdClass: []
+      - Id: 172
+        ClassName: Quitanieves
+        IconImg1: e07edee8-5ba3-4e4f-8f43-60511e04ea16.jpg
+        IconImg2: a39e6c73-362e-4240-846d-ff7fe8b2334f.jpg
+        ThirdClass: []
+    - Id: 24
+      ClassName: Limpiadores a presión
+      SecondClass:
+      - Id: 173
+        ClassName: Limpiador a presión eléctrico
+        IconImg1: 19a9f81d-50f0-490d-b573-33424eacc548.jpg
+        IconImg2: ce65171d-c9bb-4676-8a86-7c6c5b9701b1.jpg
+        ThirdClass: []
+      - Id: 174
+        ClassName: Limpiador a presión a gasolina
+        IconImg1: b198c08a-4c48-4875-800d-58b4bed46809.jpg
+        IconImg2: 49bdf861-2737-4f14-8e11-ec4fa41701bb.jpg
+        ThirdClass: []
+      - Id: 175
+        ClassName: Limpiador a presión inalámbrico
+        IconImg1: 832e2bb7-c01e-4644-8ca6-dedcecd044c5.jpg
+        IconImg2: 511dc107-8b94-44d7-942c-8807bea4d206.jpg
+        ThirdClass: []
+  - Id: 8
+    CountryName: France
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 19
+      ClassName: Produits d'extérieur
+      SecondClass:
+      - Id: 130
+        ClassName: Robot-tondeuse
+        IconImg1: 8a1b0103-84de-4487-a5d1-4ac256f02acb.jpg
+        IconImg2: 2c868e89-607f-4545-a775-31f0f25cbda3.jpg
+        ThirdClass:
+        - ThridClassName: Robot-tondeuse
+          Products:
+          - ProductId: 607
+            ProductName: SA500ECO
+            IconImgUrl: 89387446-1f3a-4135-9c3e-e1d7a0e7e61c.jpg
+            ThirdClassId: 359
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batterie
+              AttrValue: Batterie Lithium-Ion, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Source d'alimentation
+              AttrValue: Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Largeur de coupe
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hauteur de coupe, min.-max.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 606
+            ProductName: SC600ECO
+            IconImgUrl: 3cadefe2-9b9c-4c79-85df-13d03c0f8624.jpg
+            ThirdClassId: 359
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batterie
+              AttrValue: Batterie Lithium-Ion, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Source d'alimentation
+              AttrValue: Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Largeur de coupe
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hauteur de coupe, min.-max.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 604
+            ProductName: SA600H
+            IconImgUrl: 1afceea2-8f66-460a-a15f-4d7093fccc41.jpg
+            ThirdClassId: 359
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batterie
+              AttrValue: Batterie Lithium-Ion, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Source d'alimentation
+              AttrValue: Entrée 110-240 V c.a., 50/60 Hz, Sortie 32 V / 1,5 A c.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Largeur de coupe
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hauteur de coupe, min.-max.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 605
+            ProductName: SA800PRO
+            IconImgUrl: 3c89aad7-bce7-40eb-be38-8bd3c6456fc5.jpg
+            ThirdClassId: 359
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batterie
+              AttrValue: Batterie Lithium-Ion, 28 V / 2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Source d'alimentation
+              AttrValue: Entrée 110-240 V c.a., 50 / 60 Hz, Sortie 32 V / 1.5A c.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Largeur de coupe
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hauteur de coupe, min.-max.
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+      - Id: 131
+        ClassName: Tondeuse
+        IconImg1: 745648bb-b410-4754-b5cd-86bcb5136df8.jpg
+        IconImg2: 4547c45a-aaa4-4858-a2e8-0e57259be670.jpg
+        ThirdClass: []
+      - Id: 132
+        ClassName: Tronçonneuse et élagueuse
+        IconImg1: 866b619b-33bb-48f8-b75b-effeebb59635.jpg
+        IconImg2: ce7c50c6-45fa-49a9-8c22-24beaa1f494c.jpg
+        ThirdClass: []
+      - Id: 135
+        ClassName: Coupe-bordure
+        IconImg1: 02addaaa-fa26-4207-889e-f10959cb2ea6.jpg
+        IconImg2: 8a5e2805-79d4-4b60-bcb6-9d2c704642df.jpg
+        ThirdClass: []
+      - Id: 136
+        ClassName: Taille-haie
+        IconImg1: 91b00ea5-04fa-4132-bb48-c598cee1b71c.jpg
+        IconImg2: e4c63791-f1a8-4e14-ab0c-b24e01db32aa.jpg
+        ThirdClass: []
+      - Id: 137
+        ClassName: Aspirateur souffleur
+        IconImg1: 4c036e2f-454f-4f98-88a1-c25353ce3429.jpg
+        IconImg2: 09b6a9cd-51e6-4de0-b383-0c212ca8d1f4.jpg
+        ThirdClass: []
+      - Id: 138
+        ClassName: Broyeur
+        IconImg1: ceb78ff6-e039-4be7-975f-876892415162.jpg
+        IconImg2: e3bdf5c1-8b1a-4930-97f7-77ddcc31a9a7.jpg
+        ThirdClass: []
+      - Id: 139
+        ClassName: Scarificateur
+        IconImg1: f7d38530-9466-44d0-8971-de0782a70809.png
+        IconImg2: be84bc3d-a362-4384-bfab-5206e15242b4.png
+        ThirdClass: []
+      - Id: 140
+        ClassName: Tiller
+        IconImg1: 0c4c842b-8eba-4f38-990f-7a8a6e1d25d4.jpg
+        IconImg2: f47ced31-1fe2-46a8-bd92-70d27545c587.jpg
+        ThirdClass: []
+      - Id: 141
+        ClassName: Fraise à neige
+        IconImg1: e4d28609-21af-4561-a4fe-a739e6affc99.jpg
+        IconImg2: 4bcb9be7-0025-48e4-8f15-bf6083d33979.jpg
+        ThirdClass: []
+    - Id: 20
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 142
+        ClassName: 'Nettoyeurs haute pression électriques '
+        IconImg1: 20b48098-0e73-4838-b5d4-852887a149de.jpg
+        IconImg2: 1be00933-8982-4c1b-9edf-afd0fc85161c.jpg
+        ThirdClass: []
+      - Id: 143
+        ClassName: Nettoyeurs haute pression à essence
+        IconImg1: 7dd26572-10f3-44ee-845e-d6e9f88dd16c.jpg
+        IconImg2: cce8ce64-5051-48a5-ba88-4d43457e8bbd.jpg
+        ThirdClass: []
+      - Id: 144
+        ClassName: Nettoyeurs haute pression sans fil
+        IconImg1: 99c88e17-c062-4f00-b5a9-7c9c88c2c344.jpg
+        IconImg2: d9d67e78-0a5d-40aa-9f15-60436743846b.jpg
+        ThirdClass: []
+  - Id: 19
+    CountryName: Italia
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 21
+      ClassName: Prodotti per u so esterno
+      SecondClass:
+      - Id: 145
+        ClassName: Robot
+        IconImg1: 37967125-f0c1-4917-aaac-12088a94a050.jpg
+        IconImg2: 32cb0439-0d06-4feb-9caf-8f38c8832f1b.jpg
+        ThirdClass:
+        - ThridClassName: Robotic Mower
+          Products:
+          - ProductId: 682
+            ProductName: SA500ECO
+            IconImgUrl: 68b9f38e-50f4-4d6c-947c-2ecf0ebe1f33.jpg
+            ThirdClassId: 397
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteria
+              AttrValue: Batteria agli ioni di litio, 28 V/2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentazione elettrica
+              AttrValue: "Ingresso 110-240 V CA, 50 / 60 Hz\vUscita 32 V / 1,5 A CC (IP67)"
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Velocità a vuoto
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Ampiezza di taglio
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 681
+            ProductName: SC600ECO
+            IconImgUrl: 16b917de-9403-4e00-8e47-d67eeba9f738.jpg
+            ThirdClassId: 397
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteria
+              AttrValue: Batteria agli ioni di litio, 28 V/2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentazione elettrica
+              AttrValue: "Ingresso 110-240 V CA, 50 / 60 Hz\vUscita 32 V / 1,5 A CC (IP67)"
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Velocità a vuoto
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Ampiezza di taglio
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 679
+            ProductName: SA600H
+            IconImgUrl: f299ad40-f168-4746-a5c1-f16aedd7a81b.jpg
+            ThirdClassId: 397
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteria
+              AttrValue: Batteria agli ioni di litio, 28 V/2,0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentazione elettrica
+              AttrValue: "Ingresso 110-240 V CA, 50 / 60 Hz\vUscita 32 V / 1,5 A CC (IP67)"
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Velocità a vuoto
+              AttrValue: 3500 RPM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Ampiezza di taglio
+              AttrValue: 180 mm
+              IsSpecial: false
+          - ProductId: 680
+            ProductName: SA800PRO
+            IconImgUrl: 276212f2-5e12-4b1d-b6f9-094c776df423.jpg
+            ThirdClassId: 397
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteria
+              AttrValue: Batteria agli ioni di litio, 28 V/2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Alimentazione elettrica
+              AttrValue: "Ingresso 110-240 V CA, 50 / 60 Hz\vUscita 32 V / 1,5 A CC (IP67)"
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Velocità a vuoto
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Ampiezza di taglio
+              AttrValue: 20 -60 mm
+              IsSpecial: false
+      - Id: 146
+        ClassName: Tosaerba
+        IconImg1: a990a21c-db32-47be-ab80-fe4c9b134dee.jpg
+        IconImg2: fc6c2f10-0236-4472-bac5-940367f42be4.jpg
+        ThirdClass: []
+      - Id: 147
+        ClassName: Motoseghe
+        IconImg1: bf0d9e8c-80bc-448a-829c-9f4c083b7cac.jpg
+        IconImg2: 3cf54442-070d-46b2-a86c-6b2bfc397132.jpg
+        ThirdClass: []
+      - Id: 150
+        ClassName: Decespugliatori
+        IconImg1: 1c9e7427-5a40-42c9-95b4-6badced351e3.jpg
+        IconImg2: 55b79164-0528-42a1-a6cd-cb274cc61e29.jpg
+        ThirdClass: []
+      - Id: 151
+        ClassName: Tagliasiepi
+        IconImg1: b208f6de-fc0d-4a36-92f6-cf8380578664.jpg
+        IconImg2: 16af4d01-45b2-4580-9315-bd5ff39eda90.jpg
+        ThirdClass: []
+      - Id: 152
+        ClassName: Soffiatori e aspiratori
+        IconImg1: 7e6f4c8b-f1b2-4c34-ba95-37bd2d2c2661.jpg
+        IconImg2: de852e03-2326-4fae-9032-daef133ba56c.jpg
+        ThirdClass: []
+      - Id: 153
+        ClassName: Trituratori
+        IconImg1: 4e064c69-7313-4264-895d-e39e796a3057.jpg
+        IconImg2: c21c99c2-ab34-46b8-9a9d-9a317f0918f0.jpg
+        ThirdClass: []
+      - Id: 154
+        ClassName: Scarificatori
+        IconImg1: e4e4baad-28ab-40f3-bbf6-9cbd41dd994c.png
+        IconImg2: 0c4033f2-6675-44ed-895b-4311884d443c.png
+        ThirdClass: []
+      - Id: 156
+        ClassName: Sgombraneve
+        IconImg1: d3746afb-0d74-4225-9f9d-5861a24707dd.jpg
+        IconImg2: 4dd97a0a-6749-4ed9-bbe3-51a1643c145f.jpg
+        ThirdClass: []
+    - Id: 22
+      ClassName: IDROPULITRICI
+      SecondClass:
+      - Id: 158
+        ClassName: Idropulitrici elettriche
+        IconImg1: bfd8f0b2-5af6-4ef0-8ed7-258f50162e1c.jpg
+        IconImg2: 66cff857-de2e-4c53-b295-09f5a949a04a.jpg
+        ThirdClass: []
+      - Id: 159
+        ClassName: Idropulitrici a benzina
+        IconImg1: 8666b97f-828e-4dd7-9a22-6627bcb20654.jpg
+        IconImg2: 73a13123-542c-4360-8d1a-e811ed9897e1.jpg
+        ThirdClass: []
+      - Id: 160
+        ClassName: Idropulitrici cordless
+        IconImg1: 5d5c45b1-4a12-41f4-bbe9-d3864b241551.jpg
+        IconImg2: ce4b2b46-45c1-49d9-9d56-d677e6b344fe.jpg
+        ThirdClass: []
+  - Id: 23
+    CountryName: Netherlands
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 25
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 176
+        ClassName: Robotic
+        IconImg1: bd0de288-c554-45e3-8464-34bf3b2750a0.jpg
+        IconImg2: 37b0665d-ce96-4873-a478-fad954d11d46.jpg
+        ThirdClass:
+        - ThridClassName: Robotic Mower
+          Products:
+          - ProductId: 832
+            ProductName: SA500ECO
+            IconImgUrl: e1d0a2fd-df6e-4694-966f-2067babb9b7f.jpg
+            ThirdClassId: 479
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Accu
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Voeding
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Snelheid zonder belasting
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Maaibreedte
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 831
+            ProductName: SC600ECO
+            IconImgUrl: 0d09431f-3798-4675-a4d1-8c8a140a5150.jpg
+            ThirdClassId: 479
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Accu
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Voeding
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Snelheid zonder belasting
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Maaibreedte
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 829
+            ProductName: SA600H
+            IconImgUrl: 4c45f208-56d1-4f60-a6a8-0f7fb8372ff0.jpg
+            ThirdClassId: 479
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Accu
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Voeding
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Snelheid zonder belasting
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Maaibreedte
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 830
+            ProductName: SA800PRO
+            IconImgUrl: 32ffc090-fbbd-4109-9b3c-980578672fc7.jpg
+            ThirdClassId: 479
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Accu
+              AttrValue: Lithium-Ion Battery, 28 V / 2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Voeding
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Snelheid zonder belasting
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Maaibreedte
+              AttrValue: 20 -60 mm
+              IsSpecial: false
+      - Id: 177
+        ClassName: Lawn Mower
+        IconImg1: 75f5fbfe-d194-45ec-bbad-446f090a616b.jpg
+        IconImg2: e3e0c0db-7df1-4669-b2bd-7fd2be076e53.jpg
+        ThirdClass: []
+      - Id: 178
+        ClassName: Saw
+        IconImg1: bfac46e2-65ed-4a81-a04a-28f277e959bc.jpg
+        IconImg2: 33f9238f-a157-4b2b-8ef1-903608459aa3.jpg
+        ThirdClass: []
+      - Id: 179
+        ClassName: Pruner
+        IconImg1: fea65474-73a6-415a-b9e5-04208b1980e1.jpg
+        IconImg2: a90af9cb-76eb-45be-8157-ec50240b3144.jpg
+        ThirdClass: []
+      - Id: 180
+        ClassName: Brush Cutter
+        IconImg1: 99aafdc1-2de6-43da-b4b5-5b27aa9df9bc.jpg
+        IconImg2: 47a324a8-25c1-4e5c-882a-90626ed21407.jpg
+        ThirdClass: []
+      - Id: 181
+        ClassName: Grass Trimmer
+        IconImg1: a767b144-ac50-46c0-8285-e77da78a84e1.jpg
+        IconImg2: 4efe28bc-06d3-4eec-88a2-a60306b7c02f.jpg
+        ThirdClass: []
+      - Id: 182
+        ClassName: Hedge Trimmer
+        IconImg1: 83eaea76-dc98-473b-9906-7acfe64e5165.jpg
+        IconImg2: cdc3694e-7b63-4ba0-908e-c8e4fd336fc0.jpg
+        ThirdClass: []
+      - Id: 183
+        ClassName: Blower & Vacuum
+        IconImg1: ad91e16d-753b-4903-ae07-92eb2952c0f8.jpg
+        IconImg2: d2690847-1226-4a9c-b7fe-36ea92c5018b.jpg
+        ThirdClass: []
+      - Id: 184
+        ClassName: Shredder
+        IconImg1: 77e9aee4-aba9-4172-8189-83c3effc0fa4.jpg
+        IconImg2: 699ded73-f168-4b26-9db2-846bbda5b15c.jpg
+        ThirdClass: []
+      - Id: 185
+        ClassName: Scarifier
+        IconImg1: 9ae65fb5-cb87-4743-aa6b-7611c323a88c.png
+        IconImg2: 58777431-3100-429c-a7ed-8257123164e5.png
+        ThirdClass: []
+      - Id: 186
+        ClassName: Tiller
+        IconImg1: 6058b7d7-552a-40dd-b1c9-e03647eee869.jpg
+        IconImg2: b06c2dcd-382c-4038-8c30-bae238ce8bf3.jpg
+        ThirdClass: []
+      - Id: 187
+        ClassName: Snow Thrower
+        IconImg1: 2920f0fa-8328-4374-a79e-d7c83b65a407.jpg
+        IconImg2: 3a06585d-3059-4917-8604-f6b526d62d1c.jpg
+        ThirdClass: []
+    - Id: 26
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 188
+        ClassName: Electric Pressure Washer
+        IconImg1: da9e1c14-5300-4218-bdb7-2215a42ad14a.jpg
+        IconImg2: 69895d33-9f06-45d4-9bdd-860493101634.jpg
+        ThirdClass: []
+      - Id: 189
+        ClassName: Petrol Pressure Washer
+        IconImg1: a73e1b1b-005d-4f4d-b374-1674fcdb73a6.jpg
+        IconImg2: 9f0572a6-8e88-4edb-ac7a-15f2d158042a.jpg
+        ThirdClass: []
+      - Id: 190
+        ClassName: Cordless Pressure Washer
+        IconImg1: 82d49c5c-5b4d-40fe-99e5-c1f75b840262.jpg
+        IconImg2: 3029a1a8-06fe-4500-ae6e-ca3bbc64d5d5.jpg
+        ThirdClass: []
+  - Id: 24
+    CountryName: Sweden
+    Link: https://www.yardforce.eu
+    FirstClass:
+    - Id: 27
+      ClassName: Outdoor Products
+      SecondClass:
+      - Id: 191
+        ClassName: Robotic
+        IconImg1: 75aa8b54-6efb-46e4-9c4d-9e340e89be3d.jpg
+        IconImg2: a487d4dc-b0c7-4d52-be83-6157da2da980.jpg
+        ThirdClass:
+        - ThridClassName: Robotic Mower
+          Products:
+          - ProductId: 828
+            ProductName: SA500ECO
+            IconImgUrl: 999d7bca-0e15-4966-90e4-c8ea8d24659c.jpg
+            ThirdClassId: 478
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteri
+              AttrValue: Lithium-Ion Battery, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Strömförsörjning
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hastighet utan belastning
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Skärbredd
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 827
+            ProductName: SC600ECO
+            IconImgUrl: d4cee111-6399-454a-b236-6ebe83fb703b.jpg
+            ThirdClassId: 478
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteri
+              AttrValue: Litium jon batteri, 28 V / 2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Strömförsörjning
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hastighet utan belastning
+              AttrValue: 180 mm
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Skärbredd
+              AttrValue: 20 - 60 mm
+              IsSpecial: false
+          - ProductId: 825
+            ProductName: SA600H
+            IconImgUrl: 709581c1-0341-4458-9a45-6e79153f979c.jpg
+            ThirdClassId: 478
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteri
+              AttrValue: Litiumjonbatteri, 28 V/2.0 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Strömförsörjning
+              AttrValue: Ineffekt 110-240 V AC, 50/60 Hz, uteffekt 32 V/1,5 A  d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hastighet utan belastning
+              AttrValue: 3500 RPM
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Skärbredd
+              AttrValue: 180 mm
+              IsSpecial: false
+          - ProductId: 826
+            ProductName: SA800PRO
+            IconImgUrl: a111db1b-cb80-4708-bc0f-6690dfc048c3.jpg
+            ThirdClassId: 478
+            ThirdAttrs:
+            - AttrId: 0
+              AttrName: Batteri
+              AttrValue: Litium jon batteri, 28 V / 2.5 Ah
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Strömförsörjning
+              AttrValue: Input 110-240 V AC, 50 / 60 Hz, Output 32 V / 1.5A d.c. (IP67)
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Hastighet utan belastning
+              AttrValue: '180 mm '
+              IsSpecial: false
+            - AttrId: 0
+              AttrName: Skärbredd
+              AttrValue: 20 -60 mm
+              IsSpecial: false
+      - Id: 192
+        ClassName: Lawn Mower
+        IconImg1: fc9a5ace-4465-4735-a431-e2477a75c7ff.jpg
+        IconImg2: b279d4e6-652e-4e4f-a7c2-6bb6e04c8a01.jpg
+        ThirdClass: []
+      - Id: 193
+        ClassName: Saw
+        IconImg1: 2126a47d-b6fd-4b0a-8803-d1d9c9246521.jpg
+        IconImg2: a746cb29-420d-4d40-ae70-b8ff88951dce.jpg
+        ThirdClass: []
+      - Id: 194
+        ClassName: Pruner
+        IconImg1: 5e5a6ab1-f010-4428-b3d2-822715ff595c.jpg
+        IconImg2: a85e1236-1049-4630-a0e8-7228046f3101.jpg
+        ThirdClass: []
+      - Id: 195
+        ClassName: Brush Cutter
+        IconImg1: 84972edf-9ea4-44dc-b693-457cb47beb7b.jpg
+        IconImg2: 4e4716f1-f279-4ee6-892a-373e3e57e25d.jpg
+        ThirdClass: []
+      - Id: 196
+        ClassName: Grass Trimmer
+        IconImg1: 75dcdde4-9a56-4bd7-8b34-2ecf8c2ecf29.jpg
+        IconImg2: 4857e0de-8e74-49d5-93db-573105507dec.jpg
+        ThirdClass: []
+      - Id: 197
+        ClassName: Hedge Trimmer
+        IconImg1: de65b7a6-cfd2-45f0-9d43-80704de36ef3.jpg
+        IconImg2: c3f58d9c-75c4-4f78-98af-c41c540b6de1.jpg
+        ThirdClass: []
+      - Id: 198
+        ClassName: Blower & Vacuum
+        IconImg1: c619edf1-bcec-4037-9ab1-3f3a656f3fa6.jpg
+        IconImg2: 80821ced-922f-4afb-97d0-6bff2348d9d7.jpg
+        ThirdClass: []
+      - Id: 199
+        ClassName: Shredder
+        IconImg1: 28c932f4-eeaa-4050-89b9-5a43703cfe2a.jpg
+        IconImg2: 88bca265-46a3-4b79-bd1d-fa7d6a59a12d.jpg
+        ThirdClass: []
+      - Id: 200
+        ClassName: Scarifier
+        IconImg1: 476aefc3-e849-4f70-9ea6-ee21c351e234.png
+        IconImg2: aa6ebe80-a13c-424c-82b2-6ee77f025a49.png
+        ThirdClass: []
+      - Id: 201
+        ClassName: Tiller
+        IconImg1: cdf8bd04-b104-4e7f-a690-86354152f7a0.jpg
+        IconImg2: 873c021a-1104-49f4-a0eb-30c31b0a5818.jpg
+        ThirdClass: []
+      - Id: 202
+        ClassName: Snow Thrower
+        IconImg1: 7768a443-7d10-41e9-8cde-2884025fb433.jpg
+        IconImg2: af899a90-64af-495a-afbd-84a6ad600a6b.jpg
+        ThirdClass: []
+    - Id: 28
+      ClassName: Pressure Washers
+      SecondClass:
+      - Id: 203
+        ClassName: Electric Pressure Washer
+        IconImg1: ec6f857d-d0c8-4506-a927-34656da986ec.jpg
+        IconImg2: 910267d0-09f9-4f6a-adef-ccd2d14d8fe0.jpg
+        ThirdClass: []
+      - Id: 204
+        ClassName: Petrol Pressure Washer
+        IconImg1: bef5b3c1-652f-4929-9a48-802ce4440ae9.jpg
+        IconImg2: 2c68a7e1-7d5e-474b-bb29-13f4ef5ecb78.jpg
+        ThirdClass: []
+      - Id: 205
+        ClassName: Cordless Pressure Washer
+        IconImg1: dcd9d84b-8d73-4fb6-ba6e-d9b3b191763c.jpg
+        IconImg2: 9e605f42-ee12-4f63-a4dd-fd0517d55277.jpg
+        ThirdClass: []

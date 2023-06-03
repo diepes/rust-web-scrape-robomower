@@ -8,16 +8,15 @@ impl OutFile {
     pub async fn new(file_name: &str) -> OutFile {
         let f = tokio::fs::File::create(file_name)
             .await
-            .expect(&format!("Unable to create file {}", file_name));
+            .unwrap_or_else(|_| panic!("Unable to create file {}", file_name));
         let file_buf_out = tokio::io::BufWriter::new(f);
         OutFile {
             file_name: file_name.to_string(),
-            file_buf_out: file_buf_out,
+            file_buf_out,
         }
     }
     pub async fn write(&mut self, text: String) {
-        let _ = self
-            .file_buf_out
+        self.file_buf_out
             .write_all(format!("{}\n", text.trim_end()).as_bytes())
             .await
             .expect("Unable to write data");
