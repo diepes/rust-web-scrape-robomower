@@ -1,9 +1,9 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-//use crate::query_get_third_class::ProductThirdClass;
+//use crate::q_g_3rd::ProductThirdClass;
 use crate::query_url;
 
-pub mod query_get_third_class;
+pub mod q_g_3rd;
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
 #[serde(deny_unknown_fields, rename_all = "PascalCase")]
@@ -14,15 +14,15 @@ pub struct Product2ndClass {
     pub icon_img1: String,
     pub icon_img2: String,
     #[serde(skip_deserializing)]
-    pub third_class: Vec<query_get_third_class::ProductThirdClass>,
-    // pub third_class: Option<Vec<query_get_third_class::ProductThirdClass>>,
+    pub third_class: Vec<q_g_3rd::ProductThirdClass>,
+    // pub third_class: Option<Vec<q_g_3rd::ProductThirdClass>>,
 }
 
-pub async fn query_get_second_classes(
+pub async fn q_g_2ndes(
     country_id: usize,
     class_id_1st: usize,
 ) -> anyhow::Result<Vec<Product2ndClass>> {
-    log::info!("query_get_second_classes");
+    log::info!("START {}-{}",country_id,class_id_1st);
     let query = format!("?countryId={}&firstClassId={}", country_id, class_id_1st);
     let url = format!(
         "{url_base}/{uri}{query}",
@@ -43,9 +43,9 @@ pub async fn query_get_second_classes(
             .join(", ")
     );
     let mut my_fut3: Vec<(
-        &mut Vec<query_get_third_class::ProductThirdClass>,
+        &mut Vec<q_g_3rd::ProductThirdClass>,
         tokio::task::JoinHandle<
-            Result<Vec<query_get_third_class::ProductThirdClass>, anyhow::Error>,
+            Result<Vec<q_g_3rd::ProductThirdClass>, anyhow::Error>,
         >,
     )> = vec![];
     for second in &mut product_classes {
@@ -61,7 +61,7 @@ pub async fn query_get_second_classes(
         {
             my_fut3.push((
                 &mut second.third_class,
-                tokio::spawn(query_get_third_class::query_get_products(
+                tokio::spawn(q_g_3rd::query_get_products(
                     country_id, second.id,
                 )),
             ));
@@ -70,5 +70,6 @@ pub async fn query_get_second_classes(
     for (third_class, fut) in my_fut3 {
         third_class.extend(fut.await??);
     }
+    log::info!("done {}-{}",country_id,class_id_1st);
     Ok(product_classes)
 }

@@ -1,6 +1,6 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-pub mod query_get_first_class;
+pub mod q_g_1st;
 use crate::query_url;
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
@@ -12,7 +12,7 @@ pub struct CountryRecord {
     #[serde(skip_serializing_if = "str::is_empty")]
     pub link: String,
     #[serde(skip_deserializing)] //add data later
-    pub first_class: Vec<query_get_first_class::ProductClass>,
+    pub first_class: Vec<q_g_1st::ProductClass>,
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
@@ -29,8 +29,8 @@ pub struct AreaRecord {
 //#   -H 'referer: https://www.yardforce-tools.com/Mobile_Web/Europe/Deutschland/Products.html' \
 //#   --compressed
 
-pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
-    log::info!("query_get_countries");
+pub async fn q_g_c() -> anyhow::Result<Vec<AreaRecord>> {
+    log::info!("START");
     let url = format!(
         "{url_base}/{uri}",
         url_base = "https://www.yardforce-tools.com",
@@ -40,18 +40,19 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
     let mut area_records: Vec<AreaRecord> =
         serde_json::from_str(query_url::get(&url).await?.as_str())?;
 
-    log::info!("Found {} area's START", area_records.len(),);
+    log::info!("Found {} area's", area_records.len(),);
     let mut my_futures: Vec<(
-        &mut Vec<query_get_first_class::ProductClass>,
-        tokio::task::JoinHandle<Result<Vec<query_get_first_class::ProductClass>, anyhow::Error>>,
+        &mut Vec<q_g_1st::ProductClass>,
+        tokio::task::JoinHandle<Result<Vec<q_g_1st::ProductClass>, anyhow::Error>>,
     )> = vec![];
     for area in &mut area_records {
         for country in &mut area.countries {
             let country_id = country.id;
+            let area_name = area.area_name.clone();
             // save mut class and future query
             my_futures.push((
                 &mut country.first_class,
-                tokio::spawn(query_get_first_class::query_get_first_classes(country_id)),
+                tokio::spawn(q_g_1st::q_g_1st(area_name, country_id)),
             ));
         }
     }
@@ -59,6 +60,6 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
     for (first_class, fut) in my_futures {
         first_class.extend(fut.await??); //1st? await, 2nd? result
     }
-    log::info!("Found {} area's done", area_records.len(),);
+    log::info!("done");
     Ok(area_records)
 }

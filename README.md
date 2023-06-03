@@ -15,3 +15,4 @@
 
 * 2023-06 use rust serde to extract info, runtime 42seconds
   * async step1 countries -> runtime 42sec -> 9.1sec  x5 improvement repeat down to 5.3s (API cache?)
+  * All async(tokyo) now get all api info in 4.5s  :) 10x improvement by using async.

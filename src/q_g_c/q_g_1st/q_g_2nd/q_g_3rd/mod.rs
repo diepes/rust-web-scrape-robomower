@@ -36,7 +36,7 @@ pub async fn query_get_products(
     second_cid: usize,
 ) -> anyhow::Result<Vec<ProductThirdClass>> {
     log::info!(
-        "q_get_p_3rd_class ?countryId={}&secondCId={} START",
+        "START countryId={}&secondCId={}",
         country_id,
         second_cid
     );
@@ -60,7 +60,7 @@ pub async fn query_get_products(
             .join(", ")
     );
     log::info!(
-        "q_get_p_3rd_class ?countryId={}&secondCId={} done",
+        "done countryId={}&secondCId={}",
         country_id,
         second_cid
     );

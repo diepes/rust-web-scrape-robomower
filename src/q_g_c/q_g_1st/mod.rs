@@ -1,6 +1,6 @@
 // PESmit 2023-05 retrieve web json from OpenMower manufactur website
 
-pub mod query_get_second_class;
+pub mod q_g_2nd;
 use crate::query_url;
 
 #[derive(serde::Deserialize, serde::Serialize, Debug)]
@@ -10,11 +10,11 @@ pub struct ProductClass {
     pub id: usize,
     pub class_name: String,
     #[serde(skip_deserializing)]
-    pub second_class: Vec<query_get_second_class::Product2ndClass>,
+    pub second_class: Vec<q_g_2nd::Product2ndClass>,
 }
 
-pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<ProductClass>> {
-    log::info!("q_get_1st_c {} START", country_id);
+pub async fn q_g_1st(area_name: String, country_id: usize) -> anyhow::Result<Vec<ProductClass>> {
+    log::info!("START {}-{}", area_name, country_id);
     let query = format!("?countryId={}", country_id);
     let url = format!(
         "{url_base}/{uri}{query}",
@@ -24,9 +24,9 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
         query = query,
     );
     let mut my_fut2: Vec<(
-        &mut Vec<query_get_second_class::Product2ndClass>,
+        &mut Vec<q_g_2nd::Product2ndClass>,
         tokio::task::JoinHandle<
-            Result<Vec<query_get_second_class::Product2ndClass>, anyhow::Error>,
+            Result<Vec<q_g_2nd::Product2ndClass>, anyhow::Error>,
         >,
     )> = vec![];
 
@@ -37,7 +37,7 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
         //let second_vec =
         my_fut2.push((
             &mut product_class.second_class,
-            tokio::spawn(query_get_second_class::query_get_second_classes(
+            tokio::spawn(q_g_2nd::q_g_2ndes(
                 country_id,
                 product_class.id,
             )),
@@ -55,6 +55,6 @@ pub async fn query_get_first_classes(country_id: usize) -> anyhow::Result<Vec<Pr
             .collect::<Vec<String>>()
             .join(", ")
     );
-    log::info!("q_get_1st_c {} done", country_id);
+    log::info!("done {}-{}", area_name, country_id);
     Ok(product_classes)
 }
