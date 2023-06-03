@@ -3,7 +3,6 @@ api_data:
   Countrys:
   - Id: 14
     CountryName: English
-    Link: ''
     FirstClass:
     - Id: 1
       ClassName: Outdoor Products
@@ -161,11 +160,9 @@ api_data:
   Countrys:
   - Id: 15
     CountryName: Canada
-    Link: ''
     FirstClass: []
   - Id: 6
     CountryName: United States
-    Link: ''
     FirstClass:
     - Id: 8
       ClassName: Outdoor Products
@@ -200,13 +197,11 @@ api_data:
         ThirdClass: []
   - Id: 16
     CountryName: Brasil
-    Link: ''
     FirstClass: []
 - AreaName: Asia & Oceania
   Countrys:
   - Id: 1
     CountryName: Australia
-    Link: ''
     FirstClass:
     - Id: 3
       ClassName: Outdoor Products
@@ -336,7 +331,6 @@ api_data:
         ThirdClass: []
   - Id: 21
     CountryName: New Zealand
-    Link: ''
     FirstClass: []
   - Id: 25
     CountryName: 中国

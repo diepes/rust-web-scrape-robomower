@@ -8,8 +8,9 @@ pub struct CountryRecord {
     //{"AreaName":"International","countries":[{"Id":14,"CountryName":"English","Link":""}]},
     pub id: usize,
     pub country_name: String,
+    #[serde(skip_serializing_if = "str::is_empty")]
     pub link: String,
-    #[serde(skip_deserializing)]
+    #[serde(skip_deserializing)]  //add data later
     pub first_class: Vec<query_get_first_class::ProductClass>,
 }
 
@@ -31,25 +32,28 @@ pub async fn query_get_countries() -> anyhow::Result<Vec<AreaRecord>> {
     log::info!("query_get_countries");
     let url = format!(
         "{url_base}/{uri}",
-        // go check out her latest album. It's 🔥
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetCountry",
     );
     let mut area_records = get(url).await?;
     log::info!("Found {} countries", area_records.len(),);
+    let mut my_futures: Vec<(
+        &mut Vec<query_get_first_class::ProductClass>,
+        tokio::task::JoinHandle<Result<Vec<query_get_first_class::ProductClass>, anyhow::Error>>,
+    )> = vec!();
     for area in &mut area_records {
-        // f.write(format!("  {}:", area.area_name)).await;
         for country in &mut area.countries {
-            //f.flush().await.expect("Unable to flush to disk");
-            // f.write(format!("    - name: {}", country.country_name))
-            //     .await;
-            // f.write(format!("      id: {}", country.id)).await;
-            // f.write("      classes_1:".to_string()).await;
             let country_id = country.id;
-            let first = query_get_first_class::query_get_first_classes(country_id).await?;
-            country.first_class.extend(first)
-            // f.write(serde_yaml::to_string(&first)?).await;
+            // save mut class and future query
+            my_futures.push((
+                &mut country.first_class,
+                tokio::spawn(query_get_first_class::query_get_first_classes(country_id)),
+            ));
         }
+    }
+    // retrieve mut class and add values from future query
+    for (first_class, fut) in my_futures {
+        first_class.extend(fut.await??);  //1st? await, 2nd? result
     }
     Ok(area_records)
 }

@@ -9,7 +9,6 @@ async fn main() -> anyhow::Result<()> {
     let mut f = write_to_file::OutFile::new("./api-dump.yaml").await;
     f.write("api_data:".to_string()).await;
 
-
     let area_records = query_get_countries::query_get_countries().await?;
     f.write(serde_yaml::to_string(&area_records)?).await;
 
