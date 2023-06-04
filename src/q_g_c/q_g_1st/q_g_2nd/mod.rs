@@ -22,11 +22,10 @@ pub async fn q_g_2ndes(
     country_id: usize,
     class_id_1st: usize,
 ) -> anyhow::Result<Vec<Product2ndClass>> {
-    log::info!("START {}-{}",country_id,class_id_1st);
+    log::info!("START {}-{}", country_id, class_id_1st);
     let query = format!("?countryId={}&firstClassId={}", country_id, class_id_1st);
     let url = format!(
         "{url_base}/{uri}{query}",
-        // go check out her latest album. It's 🔥
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetSecondClasses",
         query = query,
@@ -44,9 +43,7 @@ pub async fn q_g_2ndes(
     );
     let mut my_fut3: Vec<(
         &mut Vec<q_g_3rd::ProductThirdClass>,
-        tokio::task::JoinHandle<
-            Result<Vec<q_g_3rd::ProductThirdClass>, anyhow::Error>,
-        >,
+        tokio::task::JoinHandle<Result<Vec<q_g_3rd::ProductThirdClass>, anyhow::Error>>,
     )> = vec![];
     for second in &mut product_classes {
         if [
@@ -61,15 +58,13 @@ pub async fn q_g_2ndes(
         {
             my_fut3.push((
                 &mut second.third_class,
-                tokio::spawn(q_g_3rd::query_get_products(
-                    country_id, second.id,
-                )),
+                tokio::spawn(q_g_3rd::query_get_products(country_id, second.id)),
             ));
         }
     }
     for (third_class, fut) in my_fut3 {
         third_class.extend(fut.await??);
     }
-    log::info!("done {}-{}",country_id,class_id_1st);
+    log::info!("done {}-{}", country_id, class_id_1st);
     Ok(product_classes)
 }

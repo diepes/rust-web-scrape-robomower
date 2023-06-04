@@ -18,16 +18,13 @@ pub async fn q_g_1st(area_name: String, country_id: usize) -> anyhow::Result<Vec
     let query = format!("?countryId={}", country_id);
     let url = format!(
         "{url_base}/{uri}{query}",
-        // go check out her latest album. It's 🔥
         url_base = "https://www.yardforce-tools.com",
         uri = "WebData/GetFirstClasses",
         query = query,
     );
     let mut my_fut2: Vec<(
         &mut Vec<q_g_2nd::Product2ndClass>,
-        tokio::task::JoinHandle<
-            Result<Vec<q_g_2nd::Product2ndClass>, anyhow::Error>,
-        >,
+        tokio::task::JoinHandle<Result<Vec<q_g_2nd::Product2ndClass>, anyhow::Error>>,
     )> = vec![];
 
     let mut product_classes: Vec<ProductClass> =
@@ -37,10 +34,7 @@ pub async fn q_g_1st(area_name: String, country_id: usize) -> anyhow::Result<Vec
         //let second_vec =
         my_fut2.push((
             &mut product_class.second_class,
-            tokio::spawn(q_g_2nd::q_g_2ndes(
-                country_id,
-                product_class.id,
-            )),
+            tokio::spawn(q_g_2nd::q_g_2ndes(country_id, product_class.id)),
         ));
     }
     for (second_class, fut) in my_fut2 {

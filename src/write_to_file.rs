@@ -1,6 +1,6 @@
 use tokio::{self, io::AsyncWriteExt};
 pub struct OutFile {
-    file_name: String,
+    pub file_name: String,
     file_buf_out: tokio::io::BufWriter<tokio::fs::File>,
 }
 

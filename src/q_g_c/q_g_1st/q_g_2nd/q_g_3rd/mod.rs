@@ -35,11 +35,7 @@ pub async fn query_get_products(
     country_id: usize,
     second_cid: usize,
 ) -> anyhow::Result<Vec<ProductThirdClass>> {
-    log::info!(
-        "START countryId={}&secondCId={}",
-        country_id,
-        second_cid
-    );
+    log::info!("START countryId={}&secondCId={}", country_id, second_cid);
     let query = format!("?countryId={}&secondCId={}", country_id, second_cid);
     let url = format!(
         "{url_base}/{uri}{query}",
@@ -59,10 +55,6 @@ pub async fn query_get_products(
             .collect::<Vec<String>>()
             .join(", ")
     );
-    log::info!(
-        "done countryId={}&secondCId={}",
-        country_id,
-        second_cid
-    );
+    log::info!("done countryId={}&secondCId={}", country_id, second_cid);
     Ok(product_classes)
 }
